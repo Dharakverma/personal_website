@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <title> Dharak Verma Portfolio</title>
+    <a href="https://www.linkedin.com/in/vermad1/"> LinkedIn</a>
+    <a href="https://github.com/Dharakverma?tab=repositories"> GitHub</a>
+    <a href="https://macformularacing.com/"> MAC Formula Racing</a>
+    <a href="../homepage.html"> Homepage</a>
+</head>
+
+<body>
+  <div id="header_block">
+    <h1>Dharak Verma Personal Portfolio</h1>
+  </div>
+  <div id="university_block">
+    <h2>McMaster University | Computer Engineering 2023</h2>
+  </div>
+  <div id="project_title_block">
+    <h1>Vehicle Controls Architecture</h1>
+    <img src="../images/control_system_architecture.png" style="width: 960px; height: 743px;"
+      alt="MAC Formula Electric Vehicle Controls System Architecture">
+  </div>
+  <div id="project_description_block">
+    <p>
+      The goal of the Controls System project is to to design, simulate, implement, and test a vehicle control system
+      for the 2022-2023 MAC Formula Electric vehicle. The control system will allow the vehicle to be operated in basic
+      driving conditions by
+      managing the following vehicle subsystems: battery management, cooling, vehicle mode selection, tractive motor,
+      and vehicle dynamics. This project is specific is purposfully abstracted away from the embedded system (as much as
+      possible) to
+      simplify the black box, white box, and unit testing that must occur before it is ready for implementation on the
+      vehicle. The control system will be developed using
+      MATLAB and Simulink, in a model-based design. The models will be converted to C code using the relevant Simulink
+      toolkit and then handed off to the Embedded Software team for
+      integration onto the relevant microcontroller.
+      <br><br>
+      The following table provides brief explinations on each of the control system blocks:
+      <br><br>
+    <table>
+      <tr>
+        <th>Control Block</th>
+        <th>Overview</th>
+      </tr>
+      <tr>
+        <td>Governor</td>
+        <td>The super-state machine of the entire vech icle. Computes current vehicle status, recieves updates from other
+          blocks, and sends commands accordingly.</td>
+      </tr>
+      <tr>
+        <td>Torque Path Controller</td>
+        <td>Contains all required logic to command and interface with the propulsion hardware for the vehicle, including
+          the pedal and steering sensors and motor controllers.</td>
+      </tr>
+      <tr>
+        <td>Battery Monitor</td>
+        <td>Contains all required logic to compute the current status of the battery pack for the vehicle. Sends the
+          relevant status to the Governor to affect vehicle status and state.</td>
+      </tr>
+    </table>
+
+    </p>
+  </div>
+</body>
+
+</html>
