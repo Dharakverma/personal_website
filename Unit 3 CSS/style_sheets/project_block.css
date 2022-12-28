@@ -1,7 +1,17 @@
+/* Style each project on the homepage into a box */
 .project_block li {
     display: inline-block;
     width: 200px;
     height: 200px;
     border: 1px solid black;
+    /* Align the text both vertically and horizontally */
     text-align: center;
+    line-height: 200px; 
+    margin: 0 auto;
 }
+
+ul {
+    display: flex;
+    justify-content: center;
+    max-width: 90%;
+  }
