@@ -1,17 +1,59 @@
 /* Style each project on the homepage into a box */
 .project_block li {
     display: inline-block;
-    width: 200px;
-    height: 200px;
+    position: relative;
+    padding-top: 12vw;
+    width: 100%;
+    height: 100%;
     border: 1px solid black;
     /* Align the text both vertically and horizontally */
     text-align: center;
-    line-height: 200px; 
-    margin: 0 auto;
+    /* line-height: calc(100% * 0.5);  */
+    margin: 20px 20px 20px 20px;
+    /* Round the borders of each box */
+    border-radius: 10px;
+    /* Add a photo the background of each box */
+    background-size: cover;
+    background-position: center;
+    /* Dynamically size the font in each box and have it fade away */
+    font-size: 3vw;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    text-decoration: none;
+    font-family: sans-serif;
+    color: rgb(218, 218, 218);
+    /* Wrap contents of each box and keep them centered */
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    max-width: 90%;
+}
+  
+.project_block li:hover {
+    color: rgb(218, 218, 218);
+    opacity: 0;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+#project_block_embedded_architecture {
+    background-image: url('../images/wip_vehicle_architecture.png');
+}
+
+#project_block_controls_architecture {
+    background-image: url('../images/control_system_architecture.png');
 }
 
 ul {
+    /* Wrap contents of each box and keep them centered */
     display: flex;
-    justify-content: center;
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
     max-width: 90%;
-  }
+}
+
+  
+  
+  
+  
+  
