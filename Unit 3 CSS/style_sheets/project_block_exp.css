@@ -1,0 +1,55 @@
+.project_block ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    /* Remove white space between list elements. We will re-define the font size for each li element */
+    font-size: 0;
+}
+
+.project_block li {
+    /* Font in each box */
+    font-size: 2vw;
+    /* Wrap text */
+    white-space: normal;
+    line-height: 4vw;
+    padding: 10px;
+    /* Dimensions of each box */
+    display: inline-block;
+    width: 350px;
+    height: 350px;
+    margin: 0 1vw;
+    /* Box borders */
+    border: 1.5px solid black;
+    /* border-radius: 10px; This will round the box borders if uncommented */
+    /* Add a photo to the background of each box */
+    background-size: cover;
+    background-position: center;
+    /* Align text in each box vertically and horizontally */
+    text-align: center;
+}
+
+#project_block_embedded_architecture {
+    background-image: url('../images/wip_vehicle_architecture.png');
+}
+
+#project_block_controls_architecture {
+    background-image: url('../images/control_system_architecture.png');
+}
+
+.project_block a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: rgb(218, 218, 218);
+    opacity: 1;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.project_block a:hover {
+    /* Make text in each box dissapear when hovering */
+    color: rgb(218, 218, 218);
+    opacity: 0;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
