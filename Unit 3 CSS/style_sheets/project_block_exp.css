@@ -1,6 +1,3 @@
-/* Stylization of the boxes was inspired by: https://www.scottsutherlandportfolio.com/
-   but no code was copied over. */
-
 .project_block ul {
     display: block;
     margin: 0 auto;
@@ -8,6 +5,7 @@
     padding: 0;
 }
 
+/* All list elements */
 .project_block li {
     /* Dimensions of each box */
     display: inline-block;
@@ -16,7 +14,7 @@
     margin: 0 2.5vw;
     /* Box borders */
     border: 1.5px solid black;
-    /* border-radius: 10px; This will round the box borders if uncommented */
+    border-radius: 10px;
     /* Add a photo to the background of each box */
     background-size: cover;
     background-position: center;
@@ -24,6 +22,8 @@
     text-align: center;
     align-items: center;
     justify-content: center;
+    /* Add a shadow to each box */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
 
 #project_block_embedded_architecture {
@@ -34,18 +34,19 @@
     background-image: url('../images/control_system_architecture.png');
 }
 
+/* Hyperlink text for each block */
 .project_block li a {
     display: flex;
     /* Maintain width and height to keep image as hyperlink */
     width: 320px;
     height: 300px;
     /* Font in each box */
-    font-size: 45px;
+    font-size: 40px;
     word-wrap: break-word;
-    color: rgb(67, 63, 63);
+    color: rgb(252, 251, 251);
     /* Remove formatting from hyperlink */
     text-decoration: none;
-    font-family: Garamond, serif;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     /* Align text in each box vertically */
     text-align: center;
     justify-content: center;
@@ -53,12 +54,14 @@
     /* Prevent hyperlink from extending beyond box */
     max-height: 200px;
     max-width: 320px;
+    /* Give the box a grey tint */
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.project_block a:hover {
-    /* Make text in each box dissapear when hovering */
-    color: rgb(218, 218, 218);
+/* Hyperlink text for each block when hovering cursor */
+.project_block li a:hover {
+    /* Make text in each box dissapear when hovering and remove tint */
     opacity: 0;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
-}
+} 
