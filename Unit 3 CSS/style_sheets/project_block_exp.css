@@ -1,28 +1,26 @@
+/* Stylization of the boxes was inspired by: https://www.scottsutherlandportfolio.com/
+   but no code was copied over. */
+
 .project_block ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
+    display: block;
+    margin: 0 auto;
+    /* Remove default padding from browsers */
+    padding: 0;
 }
 
 .project_block li {
-    /* Font in each box */
-    font-size: 3vw;
-    /* Wrap text */
-    white-space: normal;
-    line-height: 5vw;
-    padding: 10px;
     /* Dimensions of each box */
     display: inline-block;
-    width: 300px;
+    width: 320px;
     height: 300px;
-    margin: 0 2vw;
+    margin: 0 2.5vw;
     /* Box borders */
     border: 1.5px solid black;
     /* border-radius: 10px; This will round the box borders if uncommented */
     /* Add a photo to the background of each box */
     background-size: cover;
     background-position: center;
-    /* Align text in each box vertically and horizontally */
+    /* Align each box vertically and horizontally */
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -37,12 +35,24 @@
 }
 
 .project_block li a {
-    display: block;
+    display: flex;
     /* Maintain width and height to keep image as hyperlink */
-    width: 100%;
-    height: 100%;
-    color: rgb(167, 8, 8);
-    opacity: 1;
+    width: 320px;
+    height: 300px;
+    /* Font in each box */
+    font-size: 45px;
+    word-wrap: break-word;
+    color: rgb(67, 63, 63);
+    /* Remove formatting from hyperlink */
+    text-decoration: none;
+    font-family: Garamond, serif;
+    /* Align text in each box vertically */
+    text-align: center;
+    justify-content: center;
+    padding-top: 100px;
+    /* Prevent hyperlink from extending beyond box */
+    max-height: 200px;
+    max-width: 320px;
 }
 
 .project_block a:hover {
