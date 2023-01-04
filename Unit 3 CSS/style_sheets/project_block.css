@@ -25,30 +25,18 @@
     height: 300px;
     /* Box borders */
     border: 1.5px solid black;
-    margin-top: 2vw;
+    margin-top: 1vw;
     margin-bottom: 2vw;
     margin: 1.5vw;
-    /* border-radius: 10px; */
+    /* border-radius: 10px; Uncomment this for a rounded box */
     /* Add a photo to the background of each box */
     background-size: cover;
     background-position: center;
-    /* Align each box vertically and horizontally */
-    text-align: center;
-    align-items: center;
-    justify-content: center;
     /* Add a shadow to each box */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
 
-#project_block_embedded_architecture {
-    background-image: url('../images/wip_vehicle_architecture.png');
-}
-
-#project_block_controls_architecture {
-    background-image: url('../images/control_system_architecture.png');
-}
-
-/* Hyperlink text for each block */
+/* Hyperlink text for each block (this allows the entire box be a hyperlink) */
 .project_block li a {
     display: flex;
     /* Maintain width and height to keep image as hyperlink */
@@ -58,13 +46,13 @@
     font-size: 40px;
     word-wrap: break-word;
     color: rgb(252, 251, 251);
-    /* Remove formatting from hyperlink */
-    text-decoration: none;
-    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     /* Align text in each box vertically */
     text-align: center;
     justify-content: center;
     padding-top: 100px;
+    /* Remove formatting from hyperlink */
+    text-decoration: none;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     /* Prevent hyperlink from extending beyond box */
     max-height: 200px;
     max-width: 320px;
@@ -78,4 +66,56 @@
     opacity: 0;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
-} 
+}
+
+#project_name_container {
+    width: 15vw;
+    text-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project_name {
+    font-size: 20px;
+    font-weight: normal;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(1, 1, 1);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    /* Horizontal line */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+/* Classes for background images */
+#project_block_embedded_architecture {
+    /* Source: https://unsplash.com/photos/pfR18JNEMv8 */
+    background-image: url('../images/stock_embedded_architecture.jpeg');
+}
+
+#project_block_communication_manager {
+    /* Source: https://unsplash.com/photos/sNQ4EnbT980 */
+    background-image: url('../images/stock_communications_manager.jpg');
+}
+
+#project_block_scheduler {
+    /* Source: https://unsplash.com/photos/UAvYasdkzq8 */
+    background-image: url('../images/stock_scheduler.jpg');
+}
+
+#project_block_controls_architecture {
+    /* Source: https://www.pinterest.com/pin/alternating-motor-patent-555190-by-nikola-tesla-1-poster-by-nerdiful-art--696439529887728198/ */
+    background-image: url('../images/stock_motor_blueprint.png');
+}
+
+#project_block_torque_path_controller {
+    /* Source: https://www.heidenhain.us/resources-and-news/what-are-torque-motors-and-benefits/ */
+    background-image: url('../images/stock_torque_motor.jpg');
+}
+
+#project_block_battery_monitor {
+    /* Source: https://cdn11.bigcommerce.com/s-4zqahxlkkh/images/stencil/2048x2048/products/1126/3574/44444__17716.1660801732.png?c=2 */
+    background-image: url('../images/stock_battery_monitor.png');
+}
+
