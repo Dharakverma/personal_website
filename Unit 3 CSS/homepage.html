@@ -11,66 +11,75 @@
 </head>
 
 <body>
-  <div id="header_block_container">
+  <div class="header_block_container">
     <div class="header_name_container">
       <h1 class="header_name">Dharak Verma</h1>
       <div class="header_subtext">McMaster University | Computer Engineering 2023</div>
     </div>
   </div>
-  <div id="introduction_block">
-    <p>
-      <span class="introduction_paragraph">Welcome to my personal portfolio! My name is Dharak Verma and I am a Senior
-        Computer Engineering student at
-        McMaster University. I have had a passion for software, hardware, and its integration for as long as I can
-        remember,
-        and I have been fortunate enough
-        to be able to apply this passion through McMaster's (MAC) Formula FSAE Electric racing team. We are a
-        student-run
-        team working to design, build, and compete with a fully-electric, formula-style racecar.</span>
-      <br><br>
-      On this website, you will find a collection of my work on MAC Formula Electric. The
-      main focus of my portfolio will be on embedded software and vehicle control projects, and how they have
-      contributed
-      to the development of the Formula Electric vehicle. Each project will be presented in a separate tab or
-      categorization, with a timeline of the work done, any hurdles encountered, lessons learned, and the final outcome.
-      <br><br>
-      The purpose of this website is to showcase my contributions and the skills I have gained while working on MAC
-      Formula Electric, and to act as a portfolio for potential employers to review my work and accomplishments.
-      It is also my hope that this website will be a valuable resource for current and future members of my Formula
-      Electric team at McMaster, as well as for hobbyists and Formula Electric members at other universities who are
-      interested in the development of our vehicle.
-    </p>
+  <div id="introduction_block_container">
+    <div id="introduction_text_container">
+      <div id="introduction">
+        <p>
+          Welcome to my personal portfolio! My name is Dharak Verma and I am a Senior
+          Computer Engineering student at
+          McMaster University. I have had a passion for software, hardware, and its integration for as long as I can
+          remember,
+          and I have been fortunate enough
+          to be able to apply this passion through McMaster's (MAC) Formula FSAE Electric racing team. We are a
+          student-run
+          team working to design, build, and compete with a fully-electric, formula-style racecar.
+          <br><br>
+          On this website, you will find a collection of my work on MAC Formula Electric. The
+          main focus of my portfolio will be on embedded software and vehicle control projects, and how they have
+          contributed
+          to the development of the Formula Electric vehicle. Each project will be presented in a separate tab or
+          categorization, with a timeline of the work done, any hurdles encountered, lessons learned, and the final
+          outcome.
+          <br><br>
+          The purpose of this website is to showcase my contributions and the skills I have gained while working on MAC
+          Formula Electric, and to act as a portfolio for potential employers to review my work and accomplishments.
+          It is also my hope that this website will be a valuable resource for current and future members of my Formula
+          Electric team at McMaster, as well as for hobbyists and Formula Electric members at other universities who are
+          interested in the development of our vehicle.
+        </p>
+      </div>
+    </div>
   </div>
-  <h2>Embedded Software</h2>
-  <ul class="project_block">
-    <li class="project_block" id="project_block_embedded_architecture">
-      <a href="embedded_projects/vehicle_architecture.html">
-        <div class="project_name">Embedded Architecture</div>
-      </a>
-    </li>
-    <li class="project_block" id="project_block_embedded_architecture">
-      <a href="embedded_projects/vehicle_architecture.html">
-        <div class="project_name">Communications Manager</div>
-      </a>
-    </li>
-    <li class="project_block" id="project_block_embedded_architecture">
-      <a href="embedded_projects/vehicle_architecture.html">
-        <div class="project_name">Scheduler-From-Scratch</div>
-      </a>
-    </li>
-  </ul>
-  <h2>Vehicle Controls</h2>
-  <ul class="project_block">
-    <li class="project_block" id="project_block_controls_architecture">
-      <a href="controls_projects/controls_architecture.html">Controls Architecture</a>
-    </li>
-    <li class="project_block" id="project_block_embedded_architecture">
-      <a href="embedded_projects/vehicle_architecture.html">Torque Path Controller</a>
-    </li>
-    <li class="project_block" id="project_block_embedded_architecture">
-      <a href="embedded_projects/vehicle_architecture.html">Battery Monitor</a>
-    </li>
-  </ul>
+  <div id="projects_container">
+    <h2>Embedded Software</h2>
+    <div id="project_block_container">
+      <ul class="project_block">
+        <li class="project_block" id="project_block_embedded_architecture">
+          <a href="embedded_projects/vehicle_architecture.html">
+            <div class="project_name">Embedded Architecture</div>
+          </a>
+        </li>
+        <li class="project_block" id="project_block_embedded_architecture">
+          <a href="embedded_projects/vehicle_architecture.html">
+            <div class="project_name">Communications Manager</div>
+          </a>
+        </li>
+        <li class="project_block" id="project_block_embedded_architecture">
+          <a href="embedded_projects/vehicle_architecture.html">
+            <div class="project_name">Scheduler-From-Scratch</div>
+          </a>
+        </li>
+      </ul>
+      <h2>Vehicle Controls</h2>
+      <ul class="project_block">
+        <li class="project_block" id="project_block_controls_architecture">
+          <a href="controls_projects/controls_architecture.html">Controls Architecture</a>
+        </li>
+        <li class="project_block" id="project_block_embedded_architecture">
+          <a href="embedded_projects/vehicle_architecture.html">Torque Path Controller</a>
+        </li>
+        <li class="project_block" id="project_block_embedded_architecture">
+          <a href="embedded_projects/vehicle_architecture.html">Battery Monitor</a>
+        </li>
+      </ul>
+    </div>
+  </div>
   <h2>Contact Me</h2>
   <p>If you would like to contact me, please submit an inquiry through the following form.</p>
   <form action="send-email.php" method="post">
