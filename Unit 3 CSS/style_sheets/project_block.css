@@ -12,11 +12,9 @@
 /* Unordered list */
 .project_block ul {
     display: block;
-    /* margin: 0 auto; */
+    margin: 0 auto;
     /* Remove default padding from browsers */
     padding: 0;
-    margin-top: 2vw;
-    margin-bottom: 2vw;
 }
 
 /* List elements */
@@ -25,9 +23,11 @@
     display: inline-block;
     width: 320px;
     height: 300px;
-    margin: 1vw;
     /* Box borders */
     border: 1.5px solid black;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    margin: 1.5vw;
     /* border-radius: 10px; */
     /* Add a photo to the background of each box */
     background-size: cover;
