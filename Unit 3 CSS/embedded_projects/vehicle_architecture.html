@@ -1,121 +1,170 @@
 <html>
 
 <head>
-    <title> Dharak Verma Portfolio</title>
-    <a href="https://www.linkedin.com/in/vermad1/"> LinkedIn</a>
-    <a href="https://github.com/Dharakverma?tab=repositories"> GitHub</a>
-    <a href="https://macformularacing.com/"> MAC Formula Racing</a>
-    <a href="../homepage.html"> Homepage</a>
+  <title> Dharak Verma Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="../style_sheets/header_block.css" />
+  <link rel="stylesheet" type="text/css" href="../style_sheets/project_information.css" />
+  <!-- Source: https://fontawesomeicons.com -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
 
 <body>
-  <div id="header_block">
-    <h1>Dharak Verma Personal Portfolio</h1>
+  <div class="header_block_container">
+    <div class="header_name_container">
+      <h1 class="header_name">Dharak Verma
+        <div class="header_icon_block">
+          <a href="https://www.linkedin.com/in/vermad1/">
+            <div class="header_icon">
+              <!-- Source: https://fontawesomeicons.com/linkedin -->
+              <i class="fa fa-linkedin-square" style="color: rgb(0, 119, 181); font-size:75px"></i>
+            </div>
+          </a>
+          <a href="https://github.com/Dharakverma?tab=repositories">
+            <div class="header_icon">
+              <!-- Source: https://fontawesomeicons.com/github-square -->
+              <i class="fa fa-github-square" style="color: rgb(0, 0, 0); font-size: 75px;"></i>
+            </div>
+          </a>
+          <a href="https://macformularacing.com">
+            <div class="header_icon">
+              <!-- Source: https://fontawesomeicons.com/automobile -->
+              <i class="fa fa-automobile" style="color: rgb(34, 34, 34); font-size: 60px;"></i>
+            </div>
+          </a>
+        </div>
+      </h1>
+      <div class="header_subtext">McMaster University | Computer Engineering 2023</div>
+    </div>
   </div>
-  <div id="university_block">
-    <h2>McMaster University | Computer Engineering 2023</h2>
-  </div>
-  <div id="project_title_block">
-    <h1>Vehicle Embedded System Architecture</h1>
-    <img src="../images/wip_vehicle_architecture.png" style="width: 1560px; height: 643px;"
-      alt="MAC Formula Electric Embedded System Architecture">
-    <!-- Add more pictures, including individual pictures of each microcontroller, its uses, and where it is located on the vehicle -->
-  </div>
-  <div id="project_description_block">
-    <p>For the 2019-2020 year, the team was looking to transition from our current embedded system architecture,
-      comprising of multiple ATMega32M1 microcontroller units (for CAN), a Rasperberry Pi3 (for our dashboard), and a
-      MicroAutoBox (for
-      our vehicle controls) to a more streamlined architecture. We chose to do this for the following reasons:
-    <ul>
-      <li>Ease of Development: When I joined as a general member on the Software team, I had to learn the
-        software and tools for multiple
-        different pieces of
-        hardware that all had to interface and integrate with one another. When I was put in a leadership and mentorship
-        position, I realized
-        how much time was wasted onboarding new members and forcing them to learn multiple different IDE's and debugging
-        tools just to get a single
-        project compiled. If we had a simplified system, that comprised of a single family of hardware, then our
-        onboarding issue would be solved while
-        also allowing new members to hit the ground running and begin contributing as fast as possible</li>
-      <li>Future Expandability: The current architecture required us to carefully plan new features before beginning
-        development, as our
-        embedded system was designed during the teams conception in 2015, far before the subsystems it was meant to
-        control were specified. This left future
-        members, such as myself, to deal with an underpowered and underspecified system. As the rules and team budget
-        allowed for us to transition to a stronger
-        family of microprocessors, there was no need to continue developing for a system that would eventually have to
-        be phased out.</li>
-      <li>Weight: The MicroAutoBox is one of the heaviest and overpowered hardware units on our vehicle. If we can
-        replace it with a microcontroller, we will significantly reduce the weight of our vehicle.</li>
-    </ul>
-    With those rationals in mind, I began working with members of my Software team as well as our Electrical team to
-    comprise a list of requirements
-    we wished for the new
-    microcontrollers and architecture to satisfy:
-    <ul>
-      <li>Must support the following protocols to interface with all vehicle subsystems and hardware:
+  <div class="information_block_container">
+    <div class="information_name_container">
+      <h2 class="information_name">Embedded System Architecture | 2020 to Present</h2>
+    </div>
+    <div class ="information_image_container">
+      <img src="../images/wip_vehicle_architecture.png" alt="MAC Formula Electric Embedded System Architecture">
+      <figcaption>2022 competition year embedded system CAN architecture, including all ECU's and CAN nodes.</figcaption>
+    </div>
+    <div class="information_text_container">
+      <div class="information">
+        <p>For the 2019-2020 year, the team was looking to transition from our current embedded system architecture,
+          comprising of multiple ATMega32M1 microcontroller units (for CAN), a Rasperberry Pi3 (for our dashboard), and
+          a
+          MicroAutoBox (for
+          our vehicle controls) to a more streamlined architecture. We chose to do this for the following reasons:
         <ul>
-          <li>All communication protocols must be usable at the same time (no shared pins if all functions are active)
-          </li>
-          <li>Minimum of 2 CAN busses</li>
-          <li>Minimum of 2 I2C interfaces, preferred support for 4</li>
-          <li>Minimum of 2 SPI interfaces, preferred support for 4</li>
-          <li>Minimum of 2 UART interfaces, preferred support for 4</li>
-          <li>Minimum of 8 PWMs</li>
-          <li>Minimum of 15 ADCs</li>
-          <li>Minimum of 4 DACs</li>
+          <li>Ease of Development: When I joined as a general member on the Software team, I had to learn the
+            software and tools for multiple
+            different pieces of
+            hardware that all had to interface and integrate with one another. When I was put in a leadership and
+            mentorship
+            position, I realized
+            how much time was wasted onboarding new members and forcing them to learn multiple different IDE's and
+            debugging
+            tools just to get a single
+            project compiled. If we had a simplified system, that comprised of a single family of hardware, then our
+            onboarding issue would be solved while
+            also allowing new members to hit the ground running and begin contributing as fast as possible</li>
+          <li>Future Expandability: The current architecture required us to carefully plan new features before beginning
+            development, as our
+            embedded system was designed during the teams conception in 2015, far before the subsystems it was meant to
+            control were specified. This left future
+            members, such as myself, to deal with an underpowered and underspecified system. As the rules and team
+            budget
+            allowed for us to transition to a stronger
+            family of microprocessors, there was no need to continue developing for a system that would eventually have
+            to
+            be phased out.</li>
+          <li>Weight: The MicroAutoBox is one of the heaviest and overpowered hardware units on our vehicle. If we can
+            replace it with a microcontroller, we will significantly reduce the weight of our vehicle.</li>
         </ul>
-      </li>
-      <li>The microcontroller selected to replace the MicroAutoBox must be able to support the autogenerated C code for
-        our vehicle control system</li>
-      <li>The family of microcontollers must include one with a digital display, to act as our dashboard and to simplfy
-        electrical packaging </li>
-      <li>The microcontrollers must have affordable (less than $200) debuggers or built-in debuggers</li>
-    </ul>
-    We first had to decide whether we wanted to continue with AVR processors, but with more powerful and streamlined
-    options, or go with an ARM processor based family of microcontrollers.
-    To keep it short, we decided to go with ARM, for a few key reasons:
-    <ul>
-      <li>Ecosystem: ARM microcontrollers are used in a wider range of products and industries, meaning there is a
-        larger community of developers and a more extensive ecosystem of software and hardware resources available.</li>
-      <li>Performance: ARM microcontrollers tend to have better performance than AVR microcontrollers, with faster clock
-        speeds and more advanced instruction sets.</li>
-      <li>Development tools: ARM microcontrollers have a more robust development ecosystem, with a wider range of tools
-        and resources available for programming and debugging.</li>
-      <li>Power efficiency: ARM microcontrollers are generally more power efficient than AVR microcontrollers, making
-        them a good choice for battery-powered applications.</li>
-      <li>Security: ARM microcontrollers often have built-in security features, such as hardware encryption and secure
-        boot, which can make them more resistant to hacking and tampering.</li>
-    </ul>
-    With ARM in mind, we began diving into both NXP and STM families of microcontrollers. During my research, I narrowed
-    our choices down to
-    the NXP MX RT1064 and the STM32F767ZI based on the following:
-    <ul>
-      <li>Processor Architecture: The STM32F767ZI uses an Arm Cortex-M7 processor, which is a high-performance processor
-        with a 32-bit architecture. The NXP MX RT1064 also uses a Cortex-M7 processor, but it is based on the NXP i.MX
-        RT106x crossover processor, which combines the Cortex-M7 with a hardware platform optimized for high-speed data
-        processing.</li>
-      <li>Memory: The STM32F767ZI has a range of memory options, including up to 1 MB of Flash memory and up to 256 KB
-        of SRAM. The NXP MX RT1064 has a larger amount of memory, with up to 4 MB of Flash and up to 1 MB of SRAM.
-        However, the STM32F767ZI may have faster memory access times due to its cache architecture.</li>
-      <li>Peripherals and Connectivity: Both the STM32F767ZI and the NXP MX RT1064 have a range of peripherals and
-        connectivity options, including Ethernet, USB, and various communication interfaces. However, the specific
-        peripherals and connectivity options available may differ between the two microcontrollers.</li>
-      <li>Power Consumption: The STM32F767ZI has a low power consumption, with a sleep mode current of just 2.5 µA. The
-        NXP MX RT1064 also has a low power consumption, with a sleep mode current of just 5 µA.</li>
-      <li>Ecosystem: The STM32F767ZI is part of the STM32 family of microcontrollers, which has a large and established
-        ecosystem of tools, software, and support resources. This can make it easier to develop applications using the
-        STM32F767ZI and to access resources and support when needed.</li>
-    </ul>
-    Both processors are within team budget, meet all requirements for our system, are easily purchasable from common
-    Canadian vendors such
-    as Digikey, and have either built-in debuggers or cheap external debugging modules. However, the STM32F7 family has
-    a stronger community, more robust hardware abstraction layer, and many engineering students at McMaster are familiar
-    with STM32 boards due to course work found in the Mechatronics program.
-    <br><br>
-    With everything considered, I decided it was best to go with the STM32F767ZI for our embedded system.
-    <!-- Talk about the uses of each ECU and why we went with the STM32F767ZI for each application, instead of different STM32 MCU's -->
-    </p>
+        With those rationals in mind, I began working with members of my Software team as well as our Electrical team to
+        comprise a list of requirements
+        we wished for the new
+        microcontrollers and architecture to satisfy:
+        <ul>
+          <li>Must support the following protocols to interface with all vehicle subsystems and hardware:
+            <ul>
+              <li>All communication protocols must be usable at the same time (no shared pins if all functions are
+                active)
+              </li>
+              <li>Minimum of 2 CAN busses</li>
+              <li>Minimum of 2 I2C interfaces, preferred support for 4</li>
+              <li>Minimum of 2 SPI interfaces, preferred support for 4</li>
+              <li>Minimum of 2 UART interfaces, preferred support for 4</li>
+              <li>Minimum of 8 PWMs</li>
+              <li>Minimum of 15 ADCs</li>
+              <li>Minimum of 4 DACs</li>
+            </ul>
+          </li>
+          <li>The microcontroller selected to replace the MicroAutoBox must be able to support the autogenerated C code
+            for
+            our vehicle control system</li>
+          <li>The family of microcontollers must include one with a digital display, to act as our dashboard and to
+            simplfy
+            electrical packaging </li>
+          <li>The microcontrollers must have affordable (less than $200) debuggers or built-in debuggers</li>
+        </ul>
+        We first had to decide whether we wanted to continue with AVR processors, but with more powerful and streamlined
+        options, or go with an ARM processor based family of microcontrollers.
+        To keep it short, we decided to go with ARM, for a few key reasons:
+        <ul>
+          <li>Ecosystem: ARM microcontrollers are used in a wider range of products and industries, meaning there is a
+            larger community of developers and a more extensive ecosystem of software and hardware resources available.
+          </li>
+          <li>Performance: ARM microcontrollers tend to have better performance than AVR microcontrollers, with faster
+            clock
+            speeds and more advanced instruction sets.</li>
+          <li>Development tools: ARM microcontrollers have a more robust development ecosystem, with a wider range of
+            tools
+            and resources available for programming and debugging.</li>
+          <li>Power efficiency: ARM microcontrollers are generally more power efficient than AVR microcontrollers,
+            making
+            them a good choice for battery-powered applications.</li>
+          <li>Security: ARM microcontrollers often have built-in security features, such as hardware encryption and
+            secure
+            boot, which can make them more resistant to hacking and tampering.</li>
+        </ul>
+        With ARM in mind, we began diving into both NXP and STM families of microcontrollers. During my research, I
+        narrowed
+        our choices down to
+        the NXP MX RT1064 and the STM32F767ZI based on the following:
+        <ul>
+          <li>Processor Architecture: The STM32F767ZI uses an Arm Cortex-M7 processor, which is a high-performance
+            processor
+            with a 32-bit architecture. The NXP MX RT1064 also uses a Cortex-M7 processor, but it is based on the NXP
+            i.MX
+            RT106x crossover processor, which combines the Cortex-M7 with a hardware platform optimized for high-speed
+            data
+            processing.</li>
+          <li>Memory: The STM32F767ZI has a range of memory options, including up to 1 MB of Flash memory and up to 256
+            KB
+            of SRAM. The NXP MX RT1064 has a larger amount of memory, with up to 4 MB of Flash and up to 1 MB of SRAM.
+            However, the STM32F767ZI may have faster memory access times due to its cache architecture.</li>
+          <li>Peripherals and Connectivity: Both the STM32F767ZI and the NXP MX RT1064 have a range of peripherals and
+            connectivity options, including Ethernet, USB, and various communication interfaces. However, the specific
+            peripherals and connectivity options available may differ between the two microcontrollers.</li>
+          <li>Power Consumption: The STM32F767ZI has a low power consumption, with a sleep mode current of just 2.5 µA.
+            The
+            NXP MX RT1064 also has a low power consumption, with a sleep mode current of just 5 µA.</li>
+          <li>Ecosystem: The STM32F767ZI is part of the STM32 family of microcontrollers, which has a large and
+            established
+            ecosystem of tools, software, and support resources. This can make it easier to develop applications using
+            the
+            STM32F767ZI and to access resources and support when needed.</li>
+        </ul>
+        Both processors are within team budget, meet all requirements for our system, are easily purchasable from common
+        Canadian vendors such
+        as Digikey, and have either built-in debuggers or cheap external debugging modules. However, the STM32F7 family
+        has
+        a stronger community, more robust hardware abstraction layer, and many engineering students at McMaster are
+        familiar
+        with STM32 boards due to course work found in the Mechatronics program.
+        <br><br>
+        With everything considered, I decided it was best to go with the STM32F767ZI for our embedded system.
+        <!-- Talk about the uses of each ECU and why we went with the STM32F767ZI for each application, instead of different STM32 MCU's -->
+        </p>
+      </div>
+    </div>
   </div>
 </body>
 
