@@ -92,6 +92,16 @@
     margin-bottom: 2vw;
 }
 
+#contact_information input {
+    height: 2vw;
+    width: 100%;
+}
+
+#contact_information textarea {
+    height: 7vw;
+    width: 100%;
+}
+
 #footer_block_container {
     display: flex;
     align-items: center;
@@ -106,4 +116,4 @@
     letter-spacing: 1px;
     margin-top: 2.5vw;
     margin-bottom: 2vw;
-}
+} 
