@@ -70,10 +70,10 @@
 
 #project_name_container {
     width: 15vw;
-    text-align: middle;
+    text-align: left;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: left;
+    justify-content: left;
 }
 
 .project_name {
