@@ -4,8 +4,10 @@
   <title> Dharak Verma Portfolio</title>
   <link rel="stylesheet" type="text/css" href="../style_sheets/header_block.css" />
   <link rel="stylesheet" type="text/css" href="../style_sheets/project_information.css" />
+  <link rel="stylesheet" type="text/css" href="../style_sheets/slideshow.css" />
   <!-- Source: https://fontawesomeicons.com -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script src="../js/slideshow.js"></script>
 </head>
 
 <body>
@@ -46,10 +48,39 @@
     <div class="information_name_container">
       <h2 class="information_name">Embedded System Architecture | 2020 to Present</h2>
     </div>
-    <div class="information_image_container">
-      <img src="../images/wip_vehicle_architecture.png" alt="MAC Formula Electric Embedded System Architecture">
-      <figcaption>2022 competition year embedded system CAN architecture, including all ECU's and CAN nodes.
-      </figcaption>
+
+    <!-- Source for slideshow HTML: https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="../images/wip_vehicle_architecture.png" style="width:100%">
+        <div class="text">Caption Text</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="../images/wip_vehicle_architecture.png" style="width:100%">
+        <div class="text">Caption Two</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="../images/wip_vehicle_architecture.png" style="width:100%">
+        <div class="text">Caption Three</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
     </div>
     <div class="information_text_container">
       <div class="information">
@@ -180,5 +211,11 @@
     <h5 id="footer_information">Last Edited: 01/04/2023 By User: Dharak Verma</h6>
   </div>
 </footer>
+
+<!-- Show the slideshow when page loads -->
+<!-- Had to add this line myself, but the source for the slideshow is: https://www.w3schools.com/howto/howto_js_slideshow.asp-->
+<script>
+  showSlides(slideIndex);
+</script>
 
 </html>
