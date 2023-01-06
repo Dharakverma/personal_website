@@ -1,4 +1,6 @@
 // Source: https://www.w3schools.com/howto/howto_js_slideshow.asp
+// Author: Unknown
+// Access Date: 01/06/2023
 
 let slideIndex = 1;
 showSlides(slideIndex);
