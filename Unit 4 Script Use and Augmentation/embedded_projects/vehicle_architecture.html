@@ -5,10 +5,9 @@
   <link rel="stylesheet" type="text/css" href="../style_sheets/header_block.css" />
   <link rel="stylesheet" type="text/css" href="../style_sheets/project_information.css" />
   <link rel="stylesheet" type="text/css" href="../style_sheets/slideshow.css" />
-  
+
   <!-- Source: https://fontawesomeicons.com -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-
   <script src="../js/slideshow.js"></script>
 </head>
 
@@ -67,8 +66,9 @@
         <div class="text">CAN architecture for the 2020 - present competition years, including all main electronic control units.</div>
       </div>
 
-      <a class="prev" onclick="plusSlides(-1)">❮</a>
-      <a class="next" onclick="plusSlides(1)">❯</a>
+      <!-- Had to manually modify the classes here to support more browsers -->
+      <a class="prev" onclick="plusSlides(-1)"><i class="fa fa-caret-left"></i></a>
+      <a class="next" onclick="plusSlides(1)"><i class="fa fa-caret-right"></i></a>
 
     </div>
     <br>
@@ -209,7 +209,7 @@
 
 <!-- Show the slideshow when page loads -->
 <!-- Had to add this line myself, but the source for the slideshow is: https://www.w3schools.com/howto/howto_js_slideshow.asp-->
-<script>
+<script type="text/javascript">
   showSlides(slideIndex);
 </script>
 
