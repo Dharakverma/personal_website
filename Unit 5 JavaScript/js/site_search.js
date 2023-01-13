@@ -39,13 +39,15 @@ const pages = [
 ];
 
 /**
- * searchPages will search through the pages array and find matching results based on any relevant keyword or part of a keyword.
+ * searchPages will search through the pages array and find matching results based on any relevant keyword or part of a keyword
  * @param {String} searchQuery - The search query
  * @returns {Array} - All matching website pages
  */
  function searchPages(searchQuery) {
+    // Create a regular expression from the search query
+    const regex = new RegExp(searchQuery, 'i');
     // Use the Array.prototype.filter() method to find pages that match the search query
-    return pages.filter(page => page.keywords.some(keyword => keyword.toLowerCase().includes(searchQuery.toLowerCase())));
+    return pages.filter(page => regex.test(page.title) || regex.test(page.content) || page.keywords.some(keyword => regex.test(keyword)));
 }
 
 /**
