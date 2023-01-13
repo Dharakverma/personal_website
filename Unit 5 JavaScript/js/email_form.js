@@ -1,4 +1,4 @@
-// collect form element and user input elements
+// globals for user forms and html elements
 emailForm = document.getElementById('email-form');
 formInputs = emailForm.elements;
 nameInput = formInputs.name;
