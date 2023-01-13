@@ -2,10 +2,12 @@
 
 <head>
   <title> Dharak Verma Portfolio</title>
-  <link rel="stylesheet" type="text/css" href="style_sheets/header_block.css" />
+  <link rel="stylesheet" type="text/css" href="style_sheets/header_footer_block.css" />
   <link rel="stylesheet" type="text/css" href="style_sheets/project_block.css" />
+  <link rel="stylesheet" type="text/css" href="style_sheets/search_bar.css" />
   <!-- Source: https://fontawesomeicons.com -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script src="js/site_search.js"></script>
 </head>
 
 <body>
@@ -34,8 +36,16 @@
         </div>
       </h1>
       <div class="header_subtext">McMaster University | Computer Engineering 2023</div>
+      <div id="search_bar_block">
+        <form onsubmit="handleSearch(); return false;">
+          <input type="text" id="searchInput">
+          <input type="submit" value="I'm Feeling Lucky">
+        </form>
+        <div id="resultsContainer"></div>
+      </div>
     </div>
   </div>
+
   <div id="introduction_block_container">
     <div id="introduction_text_container">
       <div id="introduction">
@@ -65,8 +75,10 @@
       </div>
     </div>
   </div>
+
   <div id="projects_container">
     <div id="project_block_container">
+
       <div id="project_name_container">
         <h2 class="project_name">Embedded Software</h2>
       </div>
@@ -75,14 +87,13 @@
           <a href="embedded_projects/vehicle_architecture.html">Embedded Architecture</a>
         </li>
         <li class="project_block" id="project_block_communication_manager">
-          <!-- <a href="embedded_projects/work_in_progress.html">Communications Manager</a> -->
-          <a>Communications Manager</a>
+          <a href="embedded_projects/work_in_progress.html">Communications Manager</a>
         </li>
         <li class="project_block" id="project_block_scheduler">
-          <!-- <a href="embedded_projects/work_in_progress.html">Scheduler-From-Scratch</a> -->
-          <a>Scheduler-From-Scratch</a>
+          <a href="embedded_projects/work_in_progress.html">Scheduler-From-Scratch</a>
         </li>
       </ul>
+
       <div id="project_name_container">
         <h2 class="project_name">Vehicle Controls</h2>
       </div>
@@ -91,14 +102,13 @@
           <a href="controls_projects/controls_architecture.html">Controls Architecture</a>
         </li>
         <li class="project_block" id="project_block_torque_path_controller">
-          <!-- <a href="embedded_projects/work_in_progress.html">Torque Path Controller</a> -->
-          <a>Torque Path Controller</a>
+          <a href="embedded_projects/work_in_progress.html">Torque Path Controller</a>
         </li>
         <li class="project_block" id="project_block_battery_monitor">
-          <!-- <a href="embedded_projects/work_in_progress.html">Battery Monitor</a> -->
-          <a>Battery Monitor</a>
+          <a href="embedded_projects/work_in_progress.html">Battery Monitor</a>
         </li>
       </ul>
+
       <div id="project_name_container">
         <h2 class="project_name">Contact Me</h2>
       </div>
@@ -108,20 +118,20 @@
             <p>If you would like to contact me, please submit an inquiry through the following form. A typically inquire
               may revolve around career opportunities, questions regarding my projects, or Formula Electric inquiries. I
               will do my best to get back to all inquiries within 3 business days.</p>
-              <form action="send-email.php" method="post">
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name"><br><br>
-                <label for="email">Email:</label><br>
-                <input type="text" id="email" name="email"><br><br>
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message"></textarea><br><br>
-                <button type="submit">Send</button>
-              </form>
+            <form action="send-email.php" method="post">
+              <label for="name">Name:</label><br>
+              <input type="text" id="name" name="name"><br><br>
+              <label for="email">Email:</label><br>
+              <input type="text" id="email" name="email"><br><br>
+              <label for="message">Message:</label><br>
+              <textarea id="message" name="message"></textarea><br><br>
+              <button type="submit">Send</button>
+            </form>
           </div>
         </div>
       </div>
     </div>
-  </div>  
+  </div>
 </body>
 
 <footer>
