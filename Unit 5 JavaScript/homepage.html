@@ -7,7 +7,17 @@
   <link rel="stylesheet" type="text/css" href="style_sheets/search_bar.css" />
   <!-- Source: https://fontawesomeicons.com -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!-- User JavaScripts -->
   <script src="js/site_search.js"></script>
+  <!-- Imported JavaScript libraries -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <!-- Initialize EmailJS library with personal user account -->
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("q0hIfERzc9uPnpLNa");
+    })();
+  </script>
 </head>
 
 <body>
@@ -120,17 +130,13 @@
               will do my best to get back to all inquiries within 3 business days.</p>
 
             <form id="email_block">
-              <label for="name">Name: </label>
-              <input type="text" name="name">
-              <br>
-              <label for="email">Email: </label>
-              <input type="email" name="email">
-              <br>
-              <label for="message">Message: </label>
-              <textarea name="message"></textarea>
-              <!-- Add extra spacing between submit button and message area -->
+              <input type="text" name="name" placeholder="Your name">
               <br><br>
-              <input type="submit" value="Send">
+              <input type="email" name="email" placeholder="Your email">
+              <br><br>
+              <textarea name="message" placeholder="Your message"></textarea>
+              <br><br>
+              <button type="submit">Send</button>
             </form>
 
           </div>
@@ -138,6 +144,10 @@
       </div>
     </div>
   </div>
+
+  <!-- User JavaScript that should load at the end of the HTML -->
+  <script src="js/email_sender.js"></script>
+
 </body>
 
 <footer>
