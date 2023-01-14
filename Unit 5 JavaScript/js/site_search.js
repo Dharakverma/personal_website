@@ -74,6 +74,7 @@ function displayResults(results) {
     } else {
         // Otherwise add each result to the results container
         results.forEach(result => {
+            // Have to repeat the element creation code as we want a new element for each search result
             link = document.createElement('a');
             description = document.createElement('p');
 

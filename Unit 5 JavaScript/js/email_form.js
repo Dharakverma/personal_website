@@ -1,9 +1,9 @@
-// globals for user forms and html elements
-emailForm = document.getElementById('email-form');
-formInputs = emailForm.elements;
-nameInput = formInputs.name;
-emailInput = formInputs.email;
-messageInput = formInputs.message;
+// Global variables for form elements and input fields
+const emailForm = document.getElementById('email_block');
+const formInputs = emailForm.elements;
+const nameInput = formInputs.name;
+const emailInput = formInputs.email;
+const messageInput = formInputs.message;
 
 // Define a function to validate the input values
 const validateInputs = (inputs) => {
@@ -12,8 +12,8 @@ const validateInputs = (inputs) => {
 
     // Iterate over the input elements
     for (const input of inputs) {
-        // If the value of the input is an empty string after being trimmed, return false
-        if (input.value.trim() === '') {
+        // If the value of the input is an empty string
+        if (input.value == "") {
             return false;
         }
         // Otherwise, add the value to the array of input values
@@ -29,8 +29,7 @@ const sendEmail = (event) => {
     event.preventDefault();
 
     // Validate the input values
-    const inputValues = validate
-    Inputs(formInputs);
+    const inputValues = validateInputs(formInputs);
 
     // If the input values are not valid, show an error message and return
     if (!inputValues) {

@@ -118,15 +118,21 @@
             <p>If you would like to contact me, please submit an inquiry through the following form. A typically inquire
               may revolve around career opportunities, questions regarding my projects, or Formula Electric inquiries. I
               will do my best to get back to all inquiries within 3 business days.</p>
-            <form action="send-email.php" method="post">
-              <label for="name">Name:</label><br>
-              <input type="text" id="name" name="name"><br><br>
-              <label for="email">Email:</label><br>
-              <input type="text" id="email" name="email"><br><br>
-              <label for="message">Message:</label><br>
-              <textarea id="message" name="message"></textarea><br><br>
-              <button type="submit">Send</button>
+
+            <form id="email_block">
+              <label for="name">Name: </label>
+              <input type="text" name="name">
+              <br>
+              <label for="email">Email: </label>
+              <input type="email" name="email">
+              <br>
+              <label for="message">Message: </label>
+              <textarea name="message"></textarea>
+              <!-- Add extra spacing between submit button and message area -->
+              <br><br>
+              <input type="submit" value="Send">
             </form>
+
           </div>
         </div>
       </div>
@@ -136,7 +142,7 @@
 
 <footer>
   <div id="footer_block_container">
-    <h5 id="footer_information">Last Edited: 01/04/2023 By User: Dharak Verma</h6>
+    <h5 id="footer_information">Last Edited: 01/14/2023 By User: Dharak Verma</h6>
   </div>
 </footer>
 

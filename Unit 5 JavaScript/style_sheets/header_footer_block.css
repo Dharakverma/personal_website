@@ -91,7 +91,12 @@
     margin-bottom: 2vw;
 }
 
-#contact_information input {
+#contact_information input[type="text"]{
+    height: 2vw;
+    width: 100%;
+}
+
+#contact_information input[type="email"]{
     height: 2vw;
     width: 100%;
 }
@@ -99,6 +104,11 @@
 #contact_information textarea {
     height: 7vw;
     width: 100%;
+}
+
+#contact_information input[type="submit"] {
+    height: 30px;
+    width: 10%;
 }
 
 #footer_block_container {
