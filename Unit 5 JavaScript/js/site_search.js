@@ -94,6 +94,6 @@ function searchFormHandler() {
     input = document.getElementById("searchInput");
     // Store the search query
     searchQuery = input.value;
-
+    
     displayResults(searchForResults(searchQuery));
 }

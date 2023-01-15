@@ -4,6 +4,7 @@
 class ProgressBar {
 
     // Constructor for a progress bar object
+    // Add an input to constructor if you want to create multiple bars. That way, the elements will be dynamically tied. 
     constructor() {
         this.progressBar = document.getElementById("progress_bar");
         this.progress = this.progressBar.querySelector(".progress");
@@ -16,7 +17,7 @@ class ProgressBar {
         // Calculate the position of the scroll bar and the total height of the document
         // Both must be constant or else they will fail to update correctly
         const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-        // Take client height (largest window height possible) as our document height
+        // Take client height (largest window height possible) as our document
         const documentHeight = document.documentElement.clientHeight;
 
         // Error handling for min and infinite scroll heights
