@@ -20,7 +20,7 @@ function sendEmail(event) {
     // Prevent the form from submitting and reloading the page
     event.preventDefault();
 
-    // If the input values are not valid, show an error message and return
+    // Input value error handling
     if (!validateInputs()) {
         alert('Please fill out all fields');
         return;
@@ -33,9 +33,9 @@ function sendEmail(event) {
         to_name: "Dharak Verma",
         message: userMessage.value,
         reply_to: userEmail.value,
-    }).then(function (response) {
+    }).then(function (response) { // Notify user of successful transmission
         alert("Email Sent");
-    }, function (error) {
+    }, function (error) { // Notify user of failure and error code
         alert("Failed to Send Email. Error " + error);
     });
 };

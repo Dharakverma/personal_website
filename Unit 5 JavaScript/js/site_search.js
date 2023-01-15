@@ -1,4 +1,4 @@
-// Object to store all search results, hyperlinks to redirect user, and relevant keywords to display search result(s)
+// Array to store all search results, hyperlinks to redirect user, and relevant keywords to display search result(s)
 const data = [
     {
         title: "Embedded Architecture",
