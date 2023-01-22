@@ -5,10 +5,13 @@
   <link rel="stylesheet" type="text/css" href="style_sheets/header_footer_block.css" />
   <link rel="stylesheet" type="text/css" href="style_sheets/project_block.css" />
   <link rel="stylesheet" type="text/css" href="style_sheets/search_bar.css" />
+  <link rel="stylesheet" type="text/css" href="style_sheets/pdf_popout.css" />
   <!-- Source: https://fontawesomeicons.com -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <!-- User JavaScripts -->
-  <script src="js/site_search.js"></script>
+  <!-- Local JavaScripts -->
+  <script type="text/javascript" src="js/site_search.js"></script>
+  <script type="text/javascript" src="js/imports/jquery.js"></script>
+  <script type="text/javascript" src="js/pdf_popout.js"></script>
   <!-- Imported JavaScript libraries -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
   </script>
@@ -120,6 +123,11 @@
       </ul>
 
       <div id="project_name_container">
+        <h2 class="project_name">Resume</h2>
+      </div>
+      <div id="pdf_popout"></div>
+
+      <div id="project_name_container">
         <h2 class="project_name">Contact Me</h2>
       </div>
       <div id="contact_block_container">
@@ -152,7 +160,7 @@
 
 <footer>
   <div id="footer_block_container">
-    <h5 id="footer_information">Last Edited: 01/14/2023 By User: Dharak Verma</h6>
+    <h5 id="footer_information">Last Edited: 01/21/2023 By User: Dharak Verma</h6>
   </div>
 </footer>
 
