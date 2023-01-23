@@ -51,3 +51,45 @@ function displaySlides(n) {
   // Add the "active" class to the dot for the requested slide
   dots[slideIndex - 1].className += " active";
 }
+
+// Function to enable zoom functionality on all images
+function enableZoom() {
+  // Pre-zoomed properties of image
+  var preZoomX, preZoomY;
+  // NOTE: 1.x is the zoom image factor, where x is the percentage zoom
+  var zoomFactor = 1.3;
+
+  // Click event for images in slideshow
+  $("img").click(function() {
+      // Get the current width and height of the image
+      preZoomX = $(this).width();
+      preZoomY = $(this).height();
+
+      // If the image is zoomed in, then it will have the zoomed class, meaning we want to zoom out
+      if($(this).hasClass("zoomed")) {
+          // Zoom image out by using Jquery animate call and reducing width and height back to defaults
+          $(this).animate({
+              width: preZoomX / zoomFactor,
+              height: preZoomY / zoomFactor
+          });
+
+          // Remove the "zoomed" class from the image so we can zoom in again on next button click
+          $(this).removeClass("zoomed");
+      } else { // Otherwise, image is not zoomed in already
+          // Zoom iamge in by using Jquery animate call and increase the X and Y by the zoom factor
+          $(this).animate({
+              width: preZoomX * zoomFactor,
+              height: preZoomY * zoomFactor
+          });
+
+          // Add zomed class to image to flag it as zoomed in
+          $(this).addClass("zoomed");
+      }
+  });
+}
+
+// Wait for the document to be ready before calling the enableZoom function
+$(document).ready(function() {
+  enableZoom();
+});
+
