@@ -87,9 +87,3 @@ function enableZoom() {
       }
   });
 }
-
-// Wait for the document to be ready before calling the enableZoom function
-$(document).ready(function() {
-  enableZoom();
-});
-
