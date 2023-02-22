@@ -1,0 +1,346 @@
+<html>
+
+<head>
+  <title> Dharak Verma Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="../style_sheets/header_footer_block.css" />
+  <link rel="stylesheet" type="text/css" href="../style_sheets/project_information.css" />
+  <link rel="stylesheet" type="text/css" href="../style_sheets/slideshow.css" />
+  <link rel="stylesheet" type="text/css" href="../style_sheets/progress_bar.css" />
+  <!-- Source: https://fontawesomeicons.com -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script type="text/javascript" src="../js/imports/jquery.js"></script>
+  <script type="text/javascript" src="../js/imports/jquery-ui.js"></script>
+  <script type="text/javascript" src="../js/slideshow.js"></script>
+</head>
+
+<body>
+  <div class="header_block_container">
+    <div class="header_name_container">
+      <h1 class="header_name">Dharak Verma
+        <div class="header_icon_block">
+          <a href="https://macformularacing.com">
+            <div class="header_icon">
+              <!-- Source: https://fontawesomeicons.com/automobile -->
+              <i class="fa fa-automobile" style="color: rgb(34, 34, 34); font-size: 60px;"></i>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/vermad1/">
+            <div class="header_icon">
+              <!-- Source: https://fontawesomeicons.com/linkedin -->
+              <i class="fa fa-linkedin-square" style="color: rgb(0, 119, 181); font-size:75px"></i>
+            </div>
+          </a>
+          <a href="https://github.com/Dharakverma?tab=repositories">
+            <div class="header_icon">
+              <!-- Source: https://fontawesomeicons.com/github-square -->
+              <i class="fa fa-github-square" style="color: rgb(0, 0, 0); font-size: 75px;"></i>
+            </div>
+          </a>
+          <a href="../homepage.html">
+            <div class="home_icon">
+              <!-- Source: https://fontawesomeicons.com/home -->
+              <i class="fa fa-home" style="color: rgb(75, 66, 66); font-size: 60px;"></i>
+            </div>
+          </a>
+        </div>
+      </h1>
+      <div class="header_subtext">McMaster University | Computer Engineering 2023</div>
+    </div>
+  </div>
+  <div class="information_block_container">
+    <div class="information_name_container">
+      <h2 class="information_name">Embedded System Architecture | 2020 to Present</h2>
+    </div>
+
+    <!-- Source for slideshow HTML: https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 5</div>
+        <img src="../images/embedded_architecture.png" style="width:100%">
+        <div class="text">Communication Area Network (CAN) architecture for the 2020 - present competition years,
+          including all main electronic
+          control units (grey) and off-the-shelf hardware (red).</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 5</div>
+        <!-- Image Source: https://www.st.com/en/microcontrollers-microprocessors/stm32f767zi.html -->
+        <img src="../images/stm32_microcontroller.png" style="width:100%">
+        <div class="text">STM32F767ZI microcontroller, our choice for all primary electronic control units in the
+          vehicle embedded system.</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 5</div>
+        <!-- Image Source: https://www.nxp.com/products/processors-and-microcontrollers/arm-microcontrollers/i-mx-rt-crossover-mcus/i-mx-rt1064-crossover-mcu-with-arm-cortex-m7-core:i.MX-RT1064 -->
+        <img src="../images/nxp_board.jpeg" style="width:100%">
+        <div class="text">NXP MX RT1064 microcontroller, one of our top contendors for all primary electronic control
+          units in the vehicile embedded system.</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 5</div>
+        <!-- Image Source: https://www.st.com/en/evaluation-tools/stm32f7508-dk.html -->
+        <img src="../images/dashboard.jpeg" style="width:100%">
+        <div class="text">STM32F7508 Discovery Kit, our off-the-shelf solution for a dashboard microcontroller.</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 5</div>
+        <!-- Image Source: https://evolveelectrics.com/products/orion-bms-2 -->
+        <img src="../images/orion_bms.jpeg" style="width:100%">
+        <div class="text">Orion 2 Battery Management System (BMS), our off-the-shelf solution for a BMS.</div>
+      </div>
+
+      <!-- Had to manually modify the classes here to support more browsers -->
+      <a class="prev" onclick="advanceSlides(-1)"><i class="fa fa-caret-left"></i></a>
+      <a class="next" onclick="advanceSlides(1)"><i class="fa fa-caret-right"></i></a>
+
+    </div>
+    <br>
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+    <div class="information_text_container">
+      <div class="information">
+        <p>For the 2019-2020 year, the team was looking to transition from our current embedded system architecture,
+          comprising of multiple ATMega32M1 microcontroller units (for the communication area network (CAN network)), a
+          Rasperberry Pi3 (for our dashboard), and
+          a
+          MicroAutoBox (for
+          our vehicle controls) to a more streamlined architecture. We chose to do this for the following reasons:
+        <ul>
+          <li>Ease of Development: When I joined as a general member on the Software team, I had to learn the
+            software and tools for multiple
+            different pieces of
+            hardware that all had to interface and integrate with one another. When I was put in a leadership and
+            mentorship
+            position, I realized
+            how much time was wasted onboarding new members and forcing them to learn multiple different IDE's and
+            debugging
+            tools just to get a single
+            project compiled. If we had a simplified system, that comprised of a single family of hardware, then our
+            onboarding issue would be solved while
+            also allowing new members to hit the ground running and begin contributing as fast as possible</li>
+          <li>Future Expandability: The current architecture required us to carefully plan new features before beginning
+            development, as our
+            embedded system was designed during the teams conception in 2015, far before the subsystems it was meant to
+            control were specified. This left future
+            members, such as myself, to deal with an underpowered and underspecified system. As the rules and team
+            budget
+            allowed for us to transition to a stronger
+            family of microprocessors, there was no need to continue developing for a system that would eventually have
+            to
+            be phased out.</li>
+          <li>Weight: The MicroAutoBox is one of the heaviest and overpowered hardware units on our vehicle. If we can
+            replace it with a microcontroller, we will significantly reduce the weight of our vehicle.</li>
+        </ul>
+        With those rationals in mind, I began working with members of my Software team as well as our Electrical team to
+        comprise a list of requirements
+        we wished for the new
+        microcontrollers and architecture to satisfy:
+        <ul>
+          <li>Must support the following protocols to interface with all vehicle subsystems and hardware:
+            <ul>
+              <li>All communication protocols must be usable at the same time (no shared pins if all functions are
+                active)
+              </li>
+              <li>Minimum of 2 CAN busses</li>
+              <li>Minimum of 2 I2C interfaces, preferred support for 4</li>
+              <li>Minimum of 2 SPI interfaces, preferred support for 4</li>
+              <li>Minimum of 2 UART interfaces, preferred support for 4</li>
+              <li>Minimum of 8 Pulse-width-modulation pins (PWMs)</li>
+              <li>Minimum of 15 Analog-to-digital pins (ADCs)</li>
+              <li>Minimum of 4 Digital-to-analog pins (DACs)</li>
+            </ul>
+          </li>
+          <li>The microcontroller selected to replace the MicroAutoBox must be able to support the autogenerated C code
+            for
+            our vehicle control system</li>
+          <li>The family of microcontollers must include one with a digital display, to act as our dashboard and to
+            simplfy
+            electrical packaging </li>
+          <li>The microcontrollers must have affordable (less than $200) debuggers or built-in debuggers</li>
+        </ul>
+        We first had to decide whether we wanted to continue with AVR processors, but with more powerful and streamlined
+        options, or go with an ARM processor based family of microcontrollers.
+        To keep it short, we decided to go with ARM, for a few key reasons:
+        <ul>
+          <li>Ecosystem: ARM microcontrollers are used in a wider range of products and industries, meaning there is a
+            larger community of developers and a more extensive ecosystem of software and hardware resources available.
+          </li>
+          <li>Performance: ARM microcontrollers tend to have better performance than AVR microcontrollers, with faster
+            clock
+            speeds and more advanced instruction sets.</li>
+          <li>Development tools: ARM microcontrollers have a more robust development ecosystem, with a wider range of
+            tools
+            and resources available for programming and debugging.</li>
+          <li>Power efficiency: ARM microcontrollers are generally more power efficient than AVR microcontrollers,
+            making
+            them a good choice for battery-powered applications.</li>
+          <li>Security: ARM microcontrollers often have built-in security features, such as hardware encryption and
+            secure
+            boot, which can make them more resistant to hacking and tampering.</li>
+        </ul>
+        With ARM in mind, we began diving into both NXP and STM families of microcontrollers. During my research, I
+        narrowed
+        our choices down to
+        the NXP MX RT1064 and the STM32F767ZI based on the following:
+        <ul>
+          <li>Processor Architecture: The STM32F767ZI uses an Arm Cortex-M7 processor, which is a high-performance
+            processor
+            with a 32-bit architecture. The NXP MX RT1064 also uses a Cortex-M7 processor, but it is based on the NXP
+            i.MX
+            RT106x crossover processor, which combines the Cortex-M7 with a hardware platform optimized for high-speed
+            data
+            processing.</li>
+          <li>Memory: The STM32F767ZI has up to 1 MB of Flash memory and up to 256
+            KB
+            of SRAM. The NXP MX RT1064 has a larger amount of memory, with up to 4 MB of Flash and up to 1 MB of SRAM.
+            However, the STM32F767ZI will, on average, have faster memory access times due to its cache architecture.
+          </li>
+          <li>Peripherals and Connectivity: Both the STM32F767ZI and the NXP MX RT1064 have a range of peripherals and
+            connectivity options, including Ethernet, USB, SPI, I2C, CAN, and UART. Both share almost the same amount of
+            connectivity options.</li>
+          <li>Power Consumption: The STM32F767ZI has a low power consumption, with a sleep mode current of just 2.5 µA.
+            The
+            NXP MX RT1064 also has a low power consumption, with a sleep mode current of 5 µA.</li>
+          <li>Ecosystem: The STM32F767ZI is part of the STM32 family of microcontrollers, which has a large and
+            established
+            ecosystem of tools, software, and support resources. This will make it easier to develop applications and to
+            access resources and support when required.</li>
+        </ul>
+        Both processors are within team budget, meet all requirements for our system, are easily purchasable from common
+        Canadian vendors such
+        as Digikey, and have either built-in debuggers or cheap external debugging modules. However, the STM32F7 family
+        has
+        a stronger community, more robust hardware abstraction layer, and many engineering students at McMaster are
+        familiar
+        with STM32 boards due to course work found in the Mechatronics program. This point for the STM32F7 family cannot
+        be understated, as it adds a sense of familiarity for any of my members who are in the Mechatronics program,
+        which typically ends up being a large number year over year.
+        <br><br>
+        With everything considered, I decided it was best to go with the STM32F767ZI for our embedded system. Each
+        microprocessor (the chip found on the microcontroller) was integrated into a custom team-designed electronic
+        control unit (ECU). The following is a
+        summary of all of our ECU's, each with a STM32F767ZI processor. Each ECU and its relevant functionality is a
+        core part of our embedded system architecture and was carefully thought out, reviewed, and implemented with the
+        help of our software and adjacent electrical team.
+        <br><br>
+        <table>
+          <tr>
+            <th>ECU</th>
+            <th>Overview</th>
+          </tr>
+          <tr>
+            <td>Front Controller</td>
+            <td>The main vehicle ECU and CAN node. Responsible for initiating vehicle startup
+              and implementing various safety features, including BSPD safety circuitry and a fault LED. Captures GPS
+              and accelerometer data, reads accelerator and brake pedal positions, sounds the ready-to-drive speaker,
+              controls brake lights, sends torque requests to motor controllers, implements torque vectoring and
+              traction control algorithms, and communicates with the LV Controller, Dashboard Screen, Motor Controllers,
+              and Orion battery management system (BMS) via three separate CAN busses. Manages shutdown circuit
+              connections for an inertia switch,
+              dash shutdown button, brake overtravel switch, front right motor interlock, and front right motor
+              connector interlock.</td>
+          </tr>
+          <tr>
+            <td>Low Voltage Controller</td>
+            <td>Responsible for power
+              distribution and fusing for all components, current monitoring, and high voltage (HV) direct-current to
+              direct-current (DCDC) control. Controls the
+              PWM of pumps and radiator fans, and manages the shutdown circuit connections for
+              rear motor interlocks,
+              rear motor connector interlocks, and HV disconnect interlock.</td>
+          </tr>
+          <tr>
+            <td>Thermal Monitoring System</td>
+            <td>Responsible for monitoring the cell temperatures in the battery pack. Continuously checks the
+              temperature of individual cells and reports it to the Orion BMS over
+              CAN. The BMS then uses that data to optimize the charging and discharging process and
+              make sure that the battery stays in a safe operating temperature range.</td>
+          </tr>
+        </table>
+        <br><br>
+
+        On top of the above ECU's, I also worked to architect the embedded system such that it would use the
+        afformentioned Orion BMS and AMK motor controller kit, both of which are extremely off-the-shelf solutions that
+        were in our teams possession prior to my joining. Thankfully, the Orion BMS and AMK motors are both very capable
+        and useful pieces of hardware, so integrating them into the embedded architecture was quite simple.
+        <br><br>
+        Another piece of hardware that was not integrated into a custom ECU was our dashboard. Instead of working to
+        create our
+        own custom dashboard, I did some research and found a suitable alternative within the STM32 family of
+        microcontrollers; the STM32F7508-DK. This discovery kit offered by STM allows users to develop and share
+        applications with the STM32F7 series of microcontrollers, ala. our entire embedded architecture. The Discovery
+        kit enables our team to create a wide range of applications, taking benefit from audio, multi-sensor support,
+        graphics, security, video, and high-speed connectivity features, and most importantly - a 4.3-inch 480x272 color
+        LCD display with a capacitive touch screen built right into the discovery kit. On top of the wide array of
+        hardware features that the discovery kit offers, it is also a winner in the software department with the free to
+        use
+        TouchGFX designer. The TouchGFX framework offers drag-and-drop-based graphic-building for an easy to use and
+        efficient development process, and it aids the user with all steps of creating and fine-tuning the visual
+        aspects of the user interface, including code generation with a single click. The TouchGFX engine is highly
+        optimized to handle any graphical elements we throw at it with minimal CPU load, resulting in smooth and
+        responsive user experience, and a worry-free development experience for our team members.
+        <br><br>
+
+        <table>
+          <tr>
+            <th>Hardware</th>
+            <th>Overview</th>
+          </tr>
+          <tr>
+            <td>Orion BMS</td>
+            <td>Responsible for monitoring the cell voltage levels in the battery pack, estimating the state of charge
+              (SOC) and maintaining a safe level by controlling the PWM of the accumulator fans based on the
+              temperature of the ambient air intake (monitored by a thermistor). The Orion BMS also controls the
+              contactors for HV positive,
+              HV negative, and precharge to the accumulator. In the event of a battery fault, the Orion BMS outputs an
+              error message which can
+              be seen on our dashboard.</td>
+          </tr>
+          <tr>
+            <td>Dashboard</td>
+            <td>Responsible for displaying critical vehicle information to the driver, such as vehicle speed, state of
+              charge, and vehicle status. The dashboard doubles as a testing utility during the development phases of
+              our vehicle, as we are able to pipe the status of each subsystem up to the dashboard via the vehicle CAN
+              bus it is connected to. In terms of competition points, the dashboard is the only source of points for the
+              software team, as the graphics-user-intrface acts as an extra creative element for our vehicle.</td>
+          </tr>
+        </table>
+        <br><br>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Progress bar related divs and scripts -->
+  <div id="progress_bar">
+    <div class="progress"></div>
+  </div>
+
+  <script src="../js/progress_bar.js"></script>
+
+</body>
+
+<footer>
+  <div id="footer_block_container">
+    <h5 id="footer_information">Last Edited: 01/10/2023 By User: Dharak Verma</h6>
+  </div>
+</footer>
+
+<!-- Show the slideshow when page loads -->
+<!-- Had to add this line myself, but the source for the slideshow is: https://www.w3schools.com/howto/howto_js_slideshow.asp-->
+<script type="text/javascript">
+  displaySlides(slideIndex);
+  enableZoom();
+</script>
+
+</html>
