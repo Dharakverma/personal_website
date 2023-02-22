@@ -1,0 +1,159 @@
+<html>
+
+<head>
+    <title> Dharak Verma Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="../style_sheets/header_footer_block.css" />
+    <link rel="stylesheet" type="text/css" href="../style_sheets/project_information.css" />
+    <link rel="stylesheet" type="text/css" href="../style_sheets/slideshow.css" />
+    <link rel="stylesheet" type="text/css" href="../style_sheets/progress_bar.css" />
+    <!-- Source: https://fontawesomeicons.com -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script type="text/javascript" src="../js/imports/jquery.js"></script>
+    <script type="text/javascript" src="../js/imports/jquery-ui.js"></script>
+    <script type="text/javascript" src="../js/slideshow.js"></script>
+</head>
+
+<body>
+    <div class="header_block_container">
+        <div class="header_name_container">
+            <h1 class="header_name">Dharak Verma
+                <div class="header_icon_block">
+
+                    <a href="https://macformularacing.com">
+                        <div class="header_icon">
+                            <!-- Source: https://fontawesomeicons.com/automobile -->
+                            <i class="fa fa-automobile" style="color: rgb(34, 34, 34); font-size: 60px;"></i>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/vermad1/">
+                        <div class="header_icon">
+                            <!-- Source: https://fontawesomeicons.com/linkedin -->
+                            <i class="fa fa-linkedin-square" style="color: rgb(0, 119, 181); font-size:75px"></i>
+                        </div>
+                    </a>
+                    <a href="https://github.com/Dharakverma?tab=repositories">
+                        <div class="header_icon">
+                            <!-- Source: https://fontawesomeicons.com/github-square -->
+                            <i class="fa fa-github-square" style="color: rgb(0, 0, 0); font-size: 75px;"></i>
+                        </div>
+                    </a>
+                    <a href="../homepage.html">
+                        <div class="home_icon">
+                            <!-- Source: https://fontawesomeicons.com/home -->
+                            <i class="fa fa-home" style="color: rgb(75, 66, 66); font-size: 60px;"></i>
+                        </div>
+                    </a>
+                </div>
+            </h1>
+            <div class="header_subtext">McMaster University | Computer Engineering 2023</div>
+        </div>
+    </div>
+    <div class="information_block_container">
+        <div class="information_name_container">
+            <h2 class="information_name">Vehicle Control System Architecture | 2022 to Present</h2>
+        </div>
+
+        <!-- Source for slideshow HTML: https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 2</div>
+                <img src="../images/control_system_architecture.png" style="width:100%">
+                <div class="text">Vehicle controls architecture for the 2022 competition year.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 2</div>
+                <img src="../images/controls_system_context_diagram.png" style="width:100%">
+                <div class="text">Context diagram for the control system, highlighting how external entities interact
+                    with the internal system .</div>
+            </div>
+
+            <!-- Had to manually modify the classes here to support more browsers -->
+            <a class="prev" onclick="advanceSlides(-1)"><i class="fa fa-caret-left"></i></a>
+            <a class="next" onclick="advanceSlides(1)"><i class="fa fa-caret-right"></i></a>
+
+
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+
+        <div class="information_text_container">
+            <div class="information">
+                <p>
+                    The goal of the Controls System project is to to design, simulate, implement, and test a vehicle
+                    control system
+                    for the 2022-2023 MAC Formula Electric vehicle. The control system will allow the vehicle to be
+                    operated in basic
+                    driving conditions by
+                    managing the following vehicle subsystems: battery management, cooling, vehicle mode selection,
+                    tractive motor,
+                    and vehicle dynamics. This project is specific is purposfully abstracted away from the embedded
+                    system (as much as
+                    possible) to
+                    simplify the black box, white box, and unit testing that must occur before it is ready for
+                    implementation on the
+                    vehicle. The control system will be developed using
+                    MATLAB and Simulink, in a model-based design. The models will be converted to C code using the
+                    relevant Simulink
+                    toolkit and then handed off to the Embedded Software team for
+                    integration onto the relevant microcontroller.
+                    <br><br>
+                    The following table provides brief explinations on each of the control system blocks:
+                    <br><br>
+                <table>
+                    <tr>
+                        <th>Control Block</th>
+                        <th>Overview</th>
+                    </tr>
+                    <tr>
+                        <td>Governor</td>
+                        <td>The super-state machine of the entire vech icle. Computes current vehicle status, recieves
+                            updates from other
+                            blocks, and sends commands accordingly.</td>
+                    </tr>
+                    <tr>
+                        <td>Torque Path Controller</td>
+                        <td>Contains all required logic to command and interface with the propulsion hardware for the
+                            vehicle, including
+                            the pedal and steering sensors and motor controllers.</td>
+                    </tr>
+                    <tr>
+                        <td>Battery Monitor</td>
+                        <td>Contains all required logic to compute the current status of the battery pack for the
+                            vehicle. Sends the
+                            relevant status to the Governor to affect vehicle status and state.</td>
+                    </tr>
+                </table>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Progress bar related divs and scripts -->
+    <div id="progress_bar">
+        <div class="progress"></div>
+    </div>
+
+    <script src="../js/progress_bar.js"></script>
+
+</body>
+
+<footer>
+    <div id="footer_block_container">
+        <h5 id="footer_information">Last Edited: 01/04/2023 By User: Dharak Verma</h6>
+    </div>
+</footer>
+
+<!-- Show the slideshow when page loads -->
+<!-- Had to add this line myself, but the source for the slideshow is: https://www.w3schools.com/howto/howto_js_slideshow.asp-->
+<script type="text/javascript">
+    displaySlides(slideIndex);
+    enableZoom();
+</script>  
+
+</html>

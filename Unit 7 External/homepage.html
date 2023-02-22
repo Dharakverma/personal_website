@@ -1,0 +1,167 @@
+<html>
+
+<head>
+  <title> Dharak Verma Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="style_sheets/header_footer_block.css" />
+  <link rel="stylesheet" type="text/css" href="style_sheets/project_block.css" />
+  <link rel="stylesheet" type="text/css" href="style_sheets/search_bar.css" />
+  <link rel="stylesheet" type="text/css" href="style_sheets/pdf_popout.css" />
+  <!-- Source: https://fontawesomeicons.com -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!-- Local JavaScripts -->
+  <script type="text/javascript" src="js/site_search.js"></script>
+  <script type="text/javascript" src="js/imports/jquery.js"></script>
+  <script type="text/javascript" src="js/pdf_popout.js"></script>
+  <!-- Imported JavaScript libraries -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <!-- Initialize EmailJS library with personal user account -->
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("q0hIfERzc9uPnpLNa");
+    })();
+  </script>
+</head>
+
+<body>
+  <div class="header_block_container">
+    <div class="header_name_container">
+      <h1 class="header_name">Dharak Verma
+        <div class="header_icon_block">
+          <a href="https://macformularacing.com">
+            <div class="header_icon">
+              <!-- Source: https://fontawesomeicons.com/automobile -->
+              <i class="fa fa-automobile" style="color: rgb(34, 34, 34); font-size: 60px;"></i>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/vermad1/">
+            <div class="header_icon">
+              <!-- Source: https://fontawesomeicons.com/linkedin -->
+              <i class="fa fa-linkedin-square" style="color: rgb(0, 119, 181); font-size:75px"></i>
+            </div>
+          </a>
+          <a href="https://github.com/Dharakverma?tab=repositories">
+            <div class="header_icon">
+              <!-- Source: https://fontawesomeicons.com/github-square -->
+              <i class="fa fa-github-square" style="color: rgb(0, 0, 0); font-size: 75px;"></i>
+            </div>
+          </a>
+        </div>
+      </h1>
+      <div class="header_subtext">McMaster University | Computer Engineering 2023</div>
+      <div id="search_bar_block">
+        <form id="search_bar">
+          <input type="text" id="search_input">
+          <input type="submit" value="I'm Feeling Lucky">
+        </form>
+        <div id="resultsContainer"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="introduction_block_container">
+    <div id="introduction_text_container">
+      <div id="introduction">
+        <p>
+          Welcome to my personal portfolio! My name is Dharak Verma and I am a Senior
+          Computer Engineering student at
+          McMaster University. I have had a passion for software, hardware, and its integration for as long as I can
+          remember,
+          and I have been fortunate enough
+          to be able to apply this passion through McMaster's (MAC) Formula FSAE Electric racing team. We are a
+          student-run
+          team working to design, build, and compete with a fully-electric, formula-style racecar.
+          <br><br>
+          On this website, you will find a collection of my work on MAC Formula Electric. The
+          main focus of my portfolio will be on embedded software and vehicle control projects, and how they have
+          contributed
+          to the development of the Formula Electric vehicle. Each project will be presented in a separate tab or
+          categorization, with a timeline of the work done, any hurdles encountered, lessons learned, and the final
+          outcome.
+          <br><br>
+          The purpose of this website is to showcase my contributions and the skills I have gained while working on MAC
+          Formula Electric, and to act as a portfolio for potential employers to review my work and accomplishments.
+          It is also my hope that this website will be a valuable resource for current and future members of my Formula
+          Electric team at McMaster, as well as for hobbyists and Formula Electric members at other universities who are
+          interested in the development of our vehicle.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="projects_container">
+    <div id="project_block_container">
+
+      <div id="project_name_container">
+        <h2 class="project_name">Embedded Software</h2>
+      </div>
+      <ul class="project_block">
+        <li class="project_block" id="project_block_embedded_architecture">
+          <a href="embedded_projects/vehicle_architecture.html">Embedded Architecture</a>
+        </li>
+        <li class="project_block" id="project_block_communication_manager">
+          <a href="embedded_projects/work_in_progress.html">Communications Manager</a>
+        </li>
+        <li class="project_block" id="project_block_scheduler">
+          <a href="embedded_projects/work_in_progress.html">Scheduler-From-Scratch</a>
+        </li>
+      </ul>
+
+      <div id="project_name_container">
+        <h2 class="project_name">Vehicle Controls</h2>
+      </div>
+      <ul class="project_block">
+        <li class="project_block" id="project_block_controls_architecture">
+          <a href="controls_projects/controls_architecture.html">Controls Architecture</a>
+        </li>
+        <li class="project_block" id="project_block_torque_path_controller">
+          <a href="embedded_projects/work_in_progress.html">Torque Path Controller</a>
+        </li>
+        <li class="project_block" id="project_block_battery_monitor">
+          <a href="embedded_projects/work_in_progress.html">Battery Monitor</a>
+        </li>
+      </ul>
+
+      <div id="project_name_container">
+        <h2 class="project_name">Resume</h2>
+      </div>
+      <div id="pdf_popout"></div>
+
+      <div id="project_name_container">
+        <h2 class="project_name">Contact Me</h2>
+      </div>
+      <div id="contact_block_container">
+        <div id="contact_text_container">
+          <div id="contact_information">
+            <p>If you would like to contact me, please submit an inquiry through the following form. A typically inquire
+              may revolve around career opportunities, questions regarding my projects, or Formula Electric inquiries. I
+              will do my best to get back to all inquiries within 3 business days.</p>
+
+            <form id="email_block">
+              <input type="text" name="name" placeholder="Your name">
+              <br><br>
+              <input type="email" name="email" placeholder="Your email">
+              <br><br>
+              <textarea name="message" placeholder="Your message"></textarea>
+              <br><br>
+              <button type="submit">Send</button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- User JavaScript that should load at the end of the HTML -->
+  <script src="js/email_sender.js"></script>
+
+</body>
+
+<footer>
+  <div id="footer_block_container">
+    <h5 id="footer_information">Last Edited: 01/21/2023 By User: Dharak Verma</h6>
+  </div>
+</footer>
+
+</html>
