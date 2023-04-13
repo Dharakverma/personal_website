@@ -96,7 +96,7 @@
         <div class="information_text_container">
             <div class="information">
                 <p>
-                    The goal of the Controls System project is to to design, simulate, implement, and test a vehicle
+                    The goal of the Controls System project is to design, test, and integrate a vehicle
                     control system
                     for the 2022-2023 MAC Formula Electric vehicle. The control system will allow the vehicle to be
                     operated in basic
@@ -114,7 +114,7 @@
                     toolkit and then handed off to the Embedded Software team for
                     integration onto the relevant microcontroller.
                     <br><br>
-                    The following table provides brief explanations on each of the control system blocks:
+                    The following table provides brief explanations on each of the control system modules:
                     <br><br>
                 <table>
                     <tr>
@@ -156,6 +156,32 @@
                             open), and determines and reports if the battery is in an operating state.</td>
                     </tr>
                 </table>
+                <br><br>
+                Again, each of these modules is designed such that they can be white box and black box tested,
+                integrated into the control system, and then the entire system can be simulated before being pushed onto
+                any form of hardware.
+                This architecture inherently frames the software system as modularized, with defined IO interactions and
+                hidden implementations. The modularization of the architecture is the single biggest benefit that will
+                pay dividends for many years to come as it provides numerous benefits that cannot be achieved with a
+                monolithic system. By breaking down the control system into smaller, more manageable modules, the user
+                can achieve greater flexibility, scalability, and maintainability.
+
+                Modularization allows users to build and test individual modules independently, making it easier to
+                isolate and squash bugs or undefined behavior. This approach simplifies the development process and
+                reduces the risk of errors. Moreover, if a specific module needs to be replaced or updated, it can be
+                done without affecting other modules in the system, inherently allowing the system to work with any
+                number of modules added or removed.
+
+                Modularization also enables the user to reuse modules across different projects, vehicles, or in our
+                case, competition seasons, massively saving the team time and resources. Instead of developing a new
+                control system from scratch, users can simply select the relevant modules and integrate them into the
+                new system, or remove the redundant modules and add new ones to the existing system.
+
+                Overall, the modular design of the Vehicle Control System architecture enables current and future
+                members of Mac Formula Electric to easily understand and modify the brains of the vehicle. Each module
+                in the design above has a clear and well-defined function, which inherently simplifies the overall
+                system design. It also allows users to quickly locate and fix issues, leading to less development time
+                spent on debugging and more time spent on feature additions.
                 </p>
             </div>
         </div>
