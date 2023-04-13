@@ -1,0 +1,16 @@
+/* Static progress bar */
+#progress_bar {
+    width: 10px;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+/* Dynamic progress bar to show how far up/down the page user is */
+#progress_bar .progress {
+    width: 100%;
+    height: 0;
+    background-color: rgb(94, 255, 0);
+}
