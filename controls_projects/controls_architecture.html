@@ -55,7 +55,7 @@
     </div>
     <div class="information_block_container">
         <div class="information_name_container">
-            <h2 class="information_name">Vehicle Control System Architecture | 2022 to Present</h2>
+            <h2 class="information_name">Vehicle Control System Architecture | 2023 to Present</h2>
             <div class="share_button">
                 <!-- Source: https://learn.microsoft.com/en-us/linkedin/consumer/integrations/self-serve/plugins/share-plugin -->
                 <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
@@ -71,7 +71,7 @@
             <div class="mySlides fade">
                 <div class="numbertext">1 / 2</div>
                 <img src="../images/control_system_architecture.png" style="width:100%">
-                <div class="text">Vehicle controls architecture for the 2022 competition year.</div>
+                <div class="text">Vehicle controls architecture for the 2022-2023 competition year.</div>
             </div>
 
             <div class="mySlides fade">
@@ -125,19 +125,35 @@
                         <td>Governor</td>
                         <td>The super-state machine of the entire vehicle. Computes current vehicle status, receives
                             updates from other
-                            blocks, and sends commands accordingly.</td>
+                            blocks, and sends commands accordingly. The Governor is responsible for controlling and
+                            monitoring the Battery Monitor,
+                            Vehicle Dynamics, Motor Interface, and Driver Interface subsystems.
+                            Governor uses the state of each module to determine an overall vehicle status, and
+                            coordinate
+                            state changes between these modules.
+                        </td>
                     </tr>
                     <tr>
-                        <td>Torque Path Controller</td>
-                        <td>Contains all required logic to command and interface with the propulsion hardware for the
-                            vehicle, including
-                            the pedal and steering sensors and motor controllers.</td>
+                        <td>Driver Interface</td>
+                        <td>The Driver Interface module reads environment signals from the driver (eg. pedal, steering
+                            input), and processes these signals for use elsewhere in the control system.</td>
+                    </tr>
+                    <tr>
+                        <td>Vehicle Dynamics</td>
+                        <td>The Vehicle Dynamics module is the medium between the Driver Interface, and the Motor
+                            interface. It takes processed inputs from both the Driver Interface and AMK motors, and uses
+                            them to calculate appropriate motor torque requests based on factors like available
+                            electrical power and component temperatures.</td>
+                    </tr>
+                    <tr>
+                        <td>Motor Interface</td>
+                        <td>The Motor Interface monitors and controls the state of each of the 2 AMK motors. As the name
+                            implies, it serves as the interface between higher level system modules and the motors.</td>
                     </tr>
                     <tr>
                         <td>Battery Monitor</td>
-                        <td>Contains all required logic to compute the current status of the battery pack for the
-                            vehicle. Sends the
-                            relevant status to the Governor to affect vehicle status and state.</td>
+                        <td>The Battery Monitor reads the battery's three high voltage contactor states (closed or
+                            open), and determines and reports if the battery is in an operating state.</td>
                     </tr>
                 </table>
                 </p>
