@@ -1,0 +1,160 @@
+<html>
+
+<head>
+    <title> Dharak Verma Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="../style_sheets/header_footer_block.css" />
+    <link rel="stylesheet" type="text/css" href="../style_sheets/project_information.css" />
+    <link rel="stylesheet" type="text/css" href="../style_sheets/slideshow.css" />
+    <link rel="stylesheet" type="text/css" href="../style_sheets/progress_bar.css" />
+    <!-- Source: https://fontawesomeicons.com -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script type="text/javascript" src="../js/imports/jquery.js"></script>
+    <script type="text/javascript" src="../js/imports/jquery-ui.js"></script>
+    <script type="text/javascript" src="../js/slideshow.js"></script>
+</head>
+
+<body>
+    <!-- Facebook comment plugin generated code -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v16.0"
+        nonce="XauTXzm6"></script>
+    <!-- End generated code -->
+    <div class="header_block_container">
+        <div class="header_name_container">
+            <h1 class="header_name">Dharak Verma
+                <div class="header_icon_block">
+
+                    <a href="https://macformularacing.com">
+                        <div class="header_icon">
+                            <!-- Source: https://fontawesomeicons.com/automobile -->
+                            <i class="fa fa-automobile" style="color: rgb(34, 34, 34); font-size: 60px;"></i>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/vermad1/">
+                        <div class="header_icon">
+                            <!-- Source: https://fontawesomeicons.com/linkedin -->
+                            <i class="fa fa-linkedin-square" style="color: rgb(0, 119, 181); font-size:75px"></i>
+                        </div>
+                    </a>
+                    <a href="https://github.com/Dharakverma?tab=repositories">
+                        <div class="header_icon">
+                            <!-- Source: https://fontawesomeicons.com/github-square -->
+                            <i class="fa fa-github-square" style="color: rgb(0, 0, 0); font-size: 75px;"></i>
+                        </div>
+                    </a>
+                    <a href="../homepage.html">
+                        <div class="home_icon">
+                            <!-- Source: https://fontawesomeicons.com/home -->
+                            <i class="fa fa-home" style="color: rgb(75, 66, 66); font-size: 60px;"></i>
+                        </div>
+                    </a>
+                </div>
+            </h1>
+            <div class="header_subtext">McMaster University | Computer Engineering 2023</div>
+        </div>
+    </div>
+    <div class="information_block_container">
+        <div class="information_name_container">
+            <h2 class="information_name">Scheduler-From-Scratch</h2>
+            <div class="share_button">
+                <!-- Source: https://learn.microsoft.com/en-us/linkedin/consumer/integrations/self-serve/plugins/share-plugin -->
+                <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+                <!-- Note: data-url has to be replaced once the website is hosted on a server, a locally hosted website causes errors with the share button script -->
+                <script type="IN/Share" data-url="https://www.linkedin.com"></script>
+            </div>
+        </div>
+        <br>
+        <div class="information_text_container">
+            <div class="information">
+                <p>
+                    Before diving into the scheduler project, let's get a bit of background. A scheduler is a software
+                    component that allows us to manage and execute tasks in a system. These
+                    tasks can be anything from simple calculations to complex algorithms that control different aspects
+                    of, what is typically, an operating system running on some hardware. In our case, we needed a
+                    scheduler to manage the execution of different tasks on our
+                    STM32 based electronic control units (ECUs) at specific time intervals. A scheduler will allow us to
+                    ensure that each task is executed in a timely
+                    manner, and that the system as a whole is running as specified.
+                    <br><br>
+                    All of our ECUs run monolithic (single) bare-metal applications. That means we are not using
+                    multiple threads. Every single task must run in a sequential order, there is no user-defined
+                    parallel execution of tasks at play. If we were to implement multi-threading, I could simply import
+                    a middleware real-time operating system, such as FreeRTOS, which would come packaged with its own
+                    real-time scheduler. Although that approach is the most logical and performance for me, it is not a
+                    good solution given the fact that our team is mainly made up of younger members who have no exposure
+                    to real-time systems, and would likely be discouraged by the large leap in complexity that FreeRTOS
+                    would bring. Because of that fact, I decided to create my own scheduler from scratch, one where I
+                    could keep the simplicity of our system in-tack but also add the much needed functionality of task
+                    scheduling.
+                    <br><br>
+                    Before any implementation, I came up with architecture which outlined the inner workings of the
+                    scheduler as well as how a user would utilize it to scheduler their task. Given the complexity of
+                    this project, I decided to consult a previous manager of mine from one of my Embedded Systems
+                    internships. My previous manager glady hopped on a call with me and we walked through the entire
+                    architecture, implementation details, and test plan. After this much needed professional
+                    consultation, I had the confidence to begin development.
+                    <br><br>
+                    To develop the scheduler, I used the STM32 hardware-abstraction-layer (HAL) tick timer as the clock
+                    source. The HAL tick timer is a
+                    system timer that generates an interrupt at a fixed interval, which is defined in the system
+                    configuration. For our use case, I set the timer to generate an interrupt every 5 milliseconds,
+                    which
+                    provided the basis for our scheduler. The 5 millisecond number was calculated by taking our fastest
+                    updating task, the CAN message updater which was required to run at least every 15 milliseconds due
+                    to safety concerns, and dividing it by the magic number of 3. This 5 millisecond base number meant
+                    that any future tasks which required to be run at a rate 3 times faster than our safety critical
+                    task could still be supported. The likely hood of that happening was very low, but if the STM32
+                    hardware supports a 5 millisecond base timer, then there is little harm in allowing support for 5
+                    millisecond tasks.
+                    <br><br>
+                    Once I had our clock source, I implemented the scheduler itself. The scheduler was designed to run
+                    on a single thread, which allowed us to simplify the code and avoid potential synchronization
+                    issues. The scheduler consisted of a list of tasks, each with its own execution interval. When a
+                    task was added to the scheduler, its execution interval was calculated based on the current system
+                    time and the desired interval. The task was then added to the list, and the scheduler would execute
+                    it at the appropriate time.
+                    <br><br>
+                    One of the main benefits of the scheduler is that it allowed me to schedule different tasks in our
+                    system, including the control system step function, reading CAN messages, and updating system
+                    status. Each of these tasks required a specific execution interval, and the scheduler ensured that
+                    they were executed at the appropriate times. This allowed me to optimize the system performance and
+                    ensure that each task was given the necessary processing time.
+                    <br><br>
+                    Overall, the scheduler was a valuable addition to our system, and it allowed me to improve our
+                    performance and stability. It also provided a foundation for future development, as the team can
+                    easily
+                    add new tasks to the scheduler and ensure that they are executed correctly. As we continue to
+                    develop our system by adding new features and tasks, I am confident that the scheduler will continue
+                    to play an important role.
+                </p>
+            </div>
+        </div>
+        <!-- Facebook comment plugin generated code -->
+        <div class="fb-comments" data-href="https://127.0.0.1:8080/embedded_projects/comms_manager.html" data-width=""
+            data-numposts="30"></div>
+        <!-- End generated code -->
+    </div>
+
+    <!-- Progress bar related divs and scripts -->
+    <div id="progress_bar">
+        <div class="progress"></div>
+    </div>
+
+    <script src="../js/progress_bar.js"></script>
+
+</body>
+
+<footer>
+    <div id="footer_block_container">
+        <h5 id="footer_information">Last Edited: 01/04/2023 By User: Dharak Verma</h6>
+    </div>
+</footer>
+
+<!-- Show the slideshow when page loads -->
+<!-- Had to add this line myself, but the source for the slideshow is: https://www.w3schools.com/howto/howto_js_slideshow.asp-->
+<script type="text/javascript">
+    displaySlides(slideIndex);
+    enableZoom();
+</script>
+
+</html>
