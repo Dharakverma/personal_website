@@ -8,7 +8,7 @@ const data = [
     {
         title: "Controls Architecture",
         url: "controls_projects/controls_architecture.html",
-        description: "2022 - 2023 simulink-based vehicle control system architecture, design decisions behind it, and details on each component.",
+        description: "2022 - 2023 Simulink-based vehicle control system architecture, design decisions behind it, and details on each component.",
     }
     // NOTE: Template for when the remaining projects are complete!
     // {
