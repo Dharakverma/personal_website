@@ -53,6 +53,22 @@
             <div class="header_subtext">McMaster University | Computer Engineering 2023</div>
         </div>
     </div>
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 1</div>
+            <!-- Source: https://www.researchgate.net/figure/Operating-System-Task-Scheduling_fig2_29460365 -->
+            <img src="../images/scheduler.png" style="width:100%">
+            <div class="text">Flowchart for a typical scheduler inside an operating system.</div>
+        </div>
+
+    </div>
+    <br>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+    </div>
+
     <div class="information_block_container">
         <div class="information_name_container">
             <h2 class="information_name">Scheduler-From-Scratch</h2>
@@ -67,7 +83,8 @@
         <div class="information_text_container">
             <div class="information">
                 <p>
-                    Before diving into the scheduler project, let's get a bit of background. A scheduler is a software
+                    Before diving into the scheduler project, let's cover some background regarding schedulers and their
+                    place in computing. A scheduler is a software
                     component that allows us to manage and execute tasks in a system. These
                     tasks can be anything from simple calculations to complex algorithms that control different aspects
                     of, what is typically, an operating system running on some hardware. In our case, we needed a
