@@ -1,0 +1,192 @@
+<html>
+
+<head>
+    <title> Dharak Verma Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="../style_sheets/header_footer_block.css" />
+    <link rel="stylesheet" type="text/css" href="../style_sheets/project_information.css" />
+    <link rel="stylesheet" type="text/css" href="../style_sheets/slideshow.css" />
+    <link rel="stylesheet" type="text/css" href="../style_sheets/progress_bar.css" />
+    <!-- Source: https://fontawesomeicons.com -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script type="text/javascript" src="../js/imports/jquery.js"></script>
+    <script type="text/javascript" src="../js/imports/jquery-ui.js"></script>
+    <script type="text/javascript" src="../js/slideshow.js"></script>
+</head>
+
+<body>
+    <!-- Facebook comment plugin generated code -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v16.0"
+        nonce="XauTXzm6"></script>
+    <!-- End generated code -->
+    <div class="header_block_container">
+        <div class="header_name_container">
+            <h1 class="header_name">Dharak Verma
+                <div class="header_icon_block">
+
+                    <a href="https://macformularacing.com">
+                        <div class="header_icon">
+                            <!-- Source: https://fontawesomeicons.com/automobile -->
+                            <i class="fa fa-automobile" style="color: rgb(34, 34, 34); font-size: 60px;"></i>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/vermad1/">
+                        <div class="header_icon">
+                            <!-- Source: https://fontawesomeicons.com/linkedin -->
+                            <i class="fa fa-linkedin-square" style="color: rgb(0, 119, 181); font-size:75px"></i>
+                        </div>
+                    </a>
+                    <a href="https://github.com/Dharakverma?tab=repositories">
+                        <div class="header_icon">
+                            <!-- Source: https://fontawesomeicons.com/github-square -->
+                            <i class="fa fa-github-square" style="color: rgb(0, 0, 0); font-size: 75px;"></i>
+                        </div>
+                    </a>
+                    <a href="../homepage.html">
+                        <div class="home_icon">
+                            <!-- Source: https://fontawesomeicons.com/home -->
+                            <i class="fa fa-home" style="color: rgb(75, 66, 66); font-size: 60px;"></i>
+                        </div>
+                    </a>
+                </div>
+            </h1>
+            <div class="header_subtext">McMaster University | Computer Engineering 2023</div>
+        </div>
+    </div>
+    <div class="information_block_container">
+        <div class="information_name_container">
+            <h2 class="information_name">Communications Manager</h2>
+            <div class="share_button">
+                <!-- Source: https://learn.microsoft.com/en-us/linkedin/consumer/integrations/self-serve/plugins/share-plugin -->
+                <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+                <!-- Note: data-url has to be replaced once the website is hosted on a server, a locally hosted website causes errors with the share button script -->
+                <script type="IN/Share" data-url="https://www.linkedin.com"></script>
+            </div>
+        </div>
+
+        <!-- Source for slideshow HTML: https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 2</div>
+                <img src="../images/layered_architecture.png" style="width:100%">
+                <div class="text">Layered architecture flow chart, depicting the flow of data from bottom to top.</div>
+            </div>
+
+            <!-- Had to manually modify the classes here to support more browsers -->
+            <a class="prev" onclick="advanceSlides(-1)"><i class="fa fa-caret-left"></i></a>
+            <a class="next" onclick="advanceSlides(1)"><i class="fa fa-caret-right"></i></a>
+
+
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+        </div>
+
+        <div class="information_text_container">
+            <div class="information">
+                <p>
+                    For the 2022-2023 competition year, I made the decision to re-think the way that the team develops,
+                    tests, and deploys any communication-related software related to the operation of the vehicle.
+                    <br><br>
+                    The previous method of developing communication-related software, if we can even call it one, was to
+                    simply write the code for the specific communication protocol while developing the
+                    board-support-package (BSP) for the electronic control unit (ECU) that the developer was currently
+                    working on. For example, if you are working on the thermal management ECU and required a SPI driver
+                    in order to read temperature values from the battery modules inside the battery pack, you would
+                    simply write a SPI driver to fulfil your specific requirements and commit that code to the GitHub
+                    repository belonging to the ECU. After seeing code developed like this for a few years, I quickly
+                    realized the amount of pain (or in software terms, "technical debt") we were about to inflict upon
+                    ourselves when it came time to integrate all ECUs together to create a cohesive embedded system.
+                    When multiple ECUs are utilizing the same communication protocol, but each has a completely
+                    different implementation and level of completion, it becomes increasingly difficult and frustrating
+                    to debug. One ECU may have a specific bug in its CAN implementation, while another may have a
+                    completely different bug for the same CAN protocol. Since the communication code is intertwined with
+                    the rest of the BSP, implementing a fix for a protocol used among multiple ECUs is difficult and
+                    time consuming to the point where, in some cases, you may as well just re-write the entire
+                    communication stack.
+                    <br><br>
+                    Unfortunately, that is the position that the team was in at the beginning of the 2022 season. There
+                    were so many unsolved bugs for various communication protocols, and such a varying level of
+                    code-completion amongst the ECUs, that I decided it would be best for both the short and long term
+                    to re-write the communications stack for the vehicle. And this time, we were going to do it right.
+                    My 3 years of co-op experience came in handy here, as I had seen, developed, tested, and iterated
+                    communication-stack-related software for both production and prototype electric vehicles. I knew we
+                    had to address three main issues:
+                <ul>
+                    <li>Standardization: The communication stack must behave the same way on all ECUs found in the
+                        vehicle. Any bugs found on one ECU should be replicable on another, and any fixes made to one
+                        ECU must be propagated to the rest.</li>
+                    <li>Maintainability: The communication stack must be easy to maintain within the codebase of each
+                        ECU. I should not have to copy-paste code into my BSP repository when a new change for (e.g.)
+                        CAN is pushed to production. I must be able to find all communications-related code in some
+                        central location.</li>
+                    <li>Testability: Each communication protocol must be developed in such a way that black and white
+                        box testing is not only simple, but so intuitive that a developer sees it as a fun task instead
+                        of a boring chore.</li>
+                </ul>
+                <br><br>
+                In order to fulfil the above requirements, combined with my prior experience, I decided to re-write (or
+                migrate) the communication stack for the vehicle. This process began by creating a GitHub repository
+                specifically for communication-related code, called the Communications Manager.
+                <br><br>
+                The Communications Manager is composed of several libraries, each consisting of a source files (.c) and
+                a
+                header files (.h). Each set of files contains all required code and application programming interfaces
+                (APIs) for the end user to be able to utilize the communication stack within their BSP. Since the
+                Communications Manager is a stand-alone GitHub repository, it means we can leverage Git Submodules, a
+                powerful tool built into GitHub which allows us to import all the files for a specific version of a
+                repository into our codebase (a BSP in this case). The submodule can be kept up-to-date through simple
+                GitHub commands, and can even be reverted to previous versions in the event of bugs or undefined
+                behavior. Through submodules, we are now able to manage the communication code stack as a version-tagged
+                and release-based piece of software, almost as if we paid a contractor to create the stack for us. This
+                design choice solves both the standardization and maintainability requirements we mentioned earlier.
+                <br><br>
+                Our team primarily uses three serial communication protocols: CAN, SPI, and UART. CAN is the most
+                crucial of the three, allowing us to communicate between various ECUs, the
+                battery management system (BMS), and the motor inverters, among others. SPI is used to communicate with
+                an inertial measurement unit (IMU), which collects accelerometer data to be used in our control systems.
+                Finally, UART is used for debugging purposes, allowing us to communicate through a J-link connector. As
+                you can see, these communication protocols deal with time sensitive data which is required for critical
+                vehicle functionality. We need any software related to these communication protocols to be thoroughly
+                tested before we can be confident in our software's reliability. That is where the modularity of the
+                Communications Manager comes in. Since each communication protocol is split into its own library inside
+                of the Communications Manager, we are able to individually test each protocol on a development board
+                without the need for any ECU, test bench, etc. We can put the libraries through various test scenarios
+                before ever tagging them for release and pushing them to production, giving us a much higher confidence
+                level in our most critical codes. This solves the last requirement for the Communications Manager,
+                testability.
+                </p>
+            </div>
+        </div>
+        <!-- Facebook comment plugin generated code -->
+        <div class="fb-comments" data-href="https://127.0.0.1:8080/embedded_projects/comms_manager.html" data-width=""
+            data-numposts="30"></div>
+        <!-- End generated code -->
+    </div>
+
+    <!-- Progress bar related divs and scripts -->
+    <div id="progress_bar">
+        <div class="progress"></div>
+    </div>
+
+    <script src="../js/progress_bar.js"></script>
+
+</body>
+
+<footer>
+    <div id="footer_block_container">
+        <h5 id="footer_information">Last Edited: 01/04/2023 By User: Dharak Verma</h6>
+    </div>
+</footer>
+
+<!-- Show the slideshow when page loads -->
+<!-- Had to add this line myself, but the source for the slideshow is: https://www.w3schools.com/howto/howto_js_slideshow.asp-->
+<script type="text/javascript">
+    displaySlides(slideIndex);
+    enableZoom();
+</script>
+
+</html>
