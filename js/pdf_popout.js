@@ -2,5 +2,6 @@
 // displaying or we have undefined behaviour
 $(document).ready(function() {
     // Append iframe to pdf_popout div
-    $("#pdf_popout").append("<iframe src='../files/dharak_verma_resume.pdf'></iframe>");
+    // NOTE: The iframe source must be found by loading the website -> inspecting the page -> finding the .pdf -> copying the link address
+    $("#pdf_popout").append("<iframe src='https://dharakverma.github.io/files/dharak_verma_resume.pdf'></iframe>");
 });
